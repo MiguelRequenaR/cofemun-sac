@@ -92,7 +92,7 @@ export default function ProductsHome() {
       className="bg-linear-to-b from-[#344920] to-[#161a10] py-20">
       <div
         className="flex flex-col md:flex-row ml-0 md:ml-[310px] items-center gap-5 md:gap-30">
-        <div className="flex flex-col items-center md:items-start text-center md:text-left w-full">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left w-full" data-aos="fade-up">
           <h3 className="text-3xl uppercase mb-4 text-white">
             Líneas de <br /> <span className="font-bold text-secondary">Abastecimiento</span>
           </h3>
@@ -112,7 +112,7 @@ export default function ProductsHome() {
             </span>
           </a>
         </div>
-        <div className="relative overflow-hidden p-10">
+        <div className="relative overflow-hidden p-10" data-aos="fade-up" data-aos-delay="100">
           <div
             className="flex gap-4 transition-transform duration-500 ease-in-out group"
             style={{ transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)` }}
@@ -149,13 +149,13 @@ export default function ProductsHome() {
           </div>
           <button
             onClick={handlePrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors cursor-pointer"
           >
             <ArrowLeft className="w-6 h-6 text-white" />
           </button>
           <button
             onClick={handleNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors cursor-pointer"
           >
             <ArrowRight className="w-6 h-6 text-white" />
           </button>

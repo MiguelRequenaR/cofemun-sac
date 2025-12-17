@@ -3,7 +3,7 @@ import { Phone, Mail, Facebook, Instagram, Linkedin, ChevronRight } from "lucide
 export default function Fotter() {
   return (
     <footer className="max-w-7xl mx-auto py-20">
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row" data-aos="fade-up">
         <div className="space-y-5 flex-1 items-center md:items-start flex flex-col">
           <h1 className="text-primary font-bold text-4xl uppercase text-center md:text-left">
             COFEMUN S.A.C.

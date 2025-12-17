@@ -38,12 +38,12 @@ export default function ServicesGrid() {
       <div
       className="max-w-7xl mx-auto">
         <h3
-        className="text-2xl md:text-3xl uppercase mb-4 text-center">
+        className="text-2xl md:text-3xl uppercase mb-4 text-center" data-aos="fade-up">
           Central de Compras de <br /> <span className="font-bold">Suministros Industriales</span>
         </h3>
-        <hr className="mb-4 w-30 mx-auto border-2" />
+        <hr className="mb-4 w-30 mx-auto border-2" data-aos="fade-up" />
         <p
-        className="text-center text-base md:text-lg py-10">
+        className="text-center text-base md:text-lg py-10" data-aos="fade-up" data-aos-delay="100">
           Disponemos del portafolio más amplio de suministros para mantenimiento, reparación y operaciones.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2">
@@ -53,6 +53,7 @@ export default function ServicesGrid() {
               href={service.link}
               className="group relative border mx-2 md:mx-0 border-white p-5 overflow-hidden h-[280px] cursor-pointer flex flex-col"
               style={{ display: 'block' }}
+              data-aos="fade-up" data-aos-delay="200"
             >
               <div className="absolute inset-0 z-10 pointer-events-none">
                 <div>

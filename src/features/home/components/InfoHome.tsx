@@ -56,7 +56,7 @@ export default function InfoHome() {
   return (
     <section>
       <div className="bg-primary py-16">
-        <h2 className="text-2xl text-white font-bold uppercase text-center">
+        <h2 className="text-2xl text-white font-bold uppercase text-center" data-aos="zoom-in">
           Reducimos el costo total de abastecimiento
         </h2>
       </div>
@@ -74,6 +74,7 @@ export default function InfoHome() {
                 <div 
                   key={item.id} 
                   className="flex items-center justify-center gap-10 min-w-full"
+                  data-aos="zoom-in"
                 >
                   <div className="bg-white rounded-full p-2">
                     <Icon className="w-10 h-10 text-primary" />
