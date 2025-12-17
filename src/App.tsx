@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { Routes, Route } from "react-router-dom"
 import MainLayout from "@/layout/MainLayout"
 import Home from "@/features/home"
+import About from "@/features/about"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -20,6 +21,7 @@ function App() {
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
+        <Route path="/nosotros" element={<About />} />
       </Route>
     </Routes>
   )
