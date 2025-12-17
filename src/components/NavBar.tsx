@@ -1,17 +1,35 @@
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import { Link } from "react-router-dom"
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
 
   const links = [
-    "Nosotros",
-    "Servicios",
-    "Importaciones",
-    "Líneas",
-    "Marcas",
-    "Catálogos",
+    {
+      label: "Nosotros",
+      link: "/nosotros",
+    },
+    {
+      label: "Servicios",
+      link: "/servicios",
+    },
+    {
+      label: "Importaciones",
+      link: "/importaciones",
+    },
+    {
+      label: "Líneas",
+      link: "/lineas",
+    },
+    {
+      label: "Marcas",
+      link: "/marcas",
+    },
+    {
+      label: "Catálogos",
+      link: "/catalogos",
+    },
   ];
 
   return (
@@ -20,46 +38,48 @@ export default function NavBar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center py-5 px-4 md:px-0">
         <div>
           {/* <img src="/logoFoodie.svg" alt="logo" /> */}
-          <h1 className="text-2xl font-bold text-white uppercase">COFEMUN S.A.C.</h1>
+          <Link to="/">
+            <h1 className="text-2xl font-bold text-white uppercase">COFEMUN S.A.C.</h1>
+          </Link>
         </div>
 
         {/* Desktop nav */}
         <nav className="hidden md:block">
           <ul className="text-white flex gap-5 font-semibold">
-            {links.map((label, idx) => (
-              <li
-                key={label}
-                className={`
-                  transition-colors duration-500 cursor-pointer 
-                  hover:text-secondary 
-                  ${activeIndex === idx ? 'text-secondary' : ''}
-                `}
-                onClick={() => setActiveIndex(idx)}
-              >
-                {label}
+            {links.map((item) => (
+              <li key={item.label}>
+                <Link
+                  to={item.link}
+                  className="relative group transition-colors duration-500 cursor-pointer hover:text-secondary"
+                >
+                  {item.label}
+                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
         <div className="hidden md:block">
-          <button 
-            className="relative overflow-hidden bg-primary text-white px-5 py-2 uppercase cursor-pointer border border-white group transition-colors duration-500 hover:text-gray-600"
-          >
-            <span
-              className="
-                absolute inset-0 
-                bg-secondary
-                translate-y-full
-                group-hover:translate-y-0
-                transition-transform duration-500 ease-in-out pointer-events-none
-              "
-            />
-            <span 
-              className="relative z-10 transition-colors duration-500"
+          <Link to="/contacto">
+            <button 
+              className="relative overflow-hidden bg-primary text-white px-5 py-2 uppercase cursor-pointer border border-white group transition-colors duration-500 hover:text-gray-600"
             >
-              Contacto
-            </span>
-          </button>
+              <span
+                className="
+                  absolute inset-0 
+                  bg-secondary
+                  translate-y-full
+                  group-hover:translate-y-0
+                  transition-transform duration-500 ease-in-out pointer-events-none
+                "
+              />
+              <span 
+                className="relative z-10 transition-colors duration-500"
+              >
+                Contacto
+              </span>
+            </button>
+          </Link>
         </div>
         {/* Botón del menú hamburguesa para móvil */}
         <button 
@@ -94,44 +114,43 @@ export default function NavBar() {
         {/* Mobile nav */}
         <nav className="flex-1 flex flex-col items-center justify-center">
           <ul className="flex flex-col gap-8 text-white text-2xl font-semibold">
-            {links.map((label, idx) => (
-              <li
-                key={label}
-                className={`
-                  cursor-pointer transition-colors duration-300
-                  hover:text-secondary 
-                  ${activeIndex === idx ? 'text-secondary' : ''}
-                `}
-                onClick={() => {
-                  setActiveIndex(idx);
-                  setMenuOpen(false);
-                }}
-              >
-                {label}
+            {links.map((item) => (
+              <li key={item.label}>
+                <Link
+                  to={item.link}
+                  className="relative group cursor-pointer transition-colors duration-300 hover:text-secondary"
+                  onClick={() => {
+                    setMenuOpen(false);
+                  }}
+                >
+                  {item.label}
+                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
         <div className="flex justify-center pb-8">
-          <button
-            className="relative overflow-hidden bg-secondary px-8 py-3 uppercase cursor-pointer border border-secondary group transition-colors duration-500 hover:text-white text-base"
-            onClick={() => setMenuOpen(false)}
-          >
-            <span
-              className="
-                absolute inset-0 
-                bg-primary
-                translate-y-full
-                group-hover:translate-y-0
-                transition-transform duration-500 ease-in-out pointer-events-none
-              "
-            />
-            <span 
-              className="relative z-10 transition-colors duration-500"
+          <Link to="/contacto" onClick={() => setMenuOpen(false)}>
+            <button
+              className="relative overflow-hidden bg-secondary px-8 py-3 uppercase cursor-pointer border border-secondary group transition-colors duration-500 hover:text-white text-base"
             >
-              Contacto
-            </span>
-          </button>
+              <span
+                className="
+                  absolute inset-0 
+                  bg-primary
+                  translate-y-full
+                  group-hover:translate-y-0
+                  transition-transform duration-500 ease-in-out pointer-events-none
+                "
+              />
+              <span 
+                className="relative z-10 transition-colors duration-500"
+              >
+                Contacto
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
     </header>
