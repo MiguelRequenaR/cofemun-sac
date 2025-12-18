@@ -22,14 +22,6 @@ export default function NavBar() {
       label: "Líneas",
       link: "/lineas",
     },
-    {
-      label: "Marcas",
-      link: "/marcas",
-    },
-    {
-      label: "Catálogos",
-      link: "/catalogos",
-    },
   ];
 
   return (
