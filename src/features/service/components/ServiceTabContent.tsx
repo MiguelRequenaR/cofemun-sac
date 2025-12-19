@@ -49,7 +49,7 @@ export default function ServiceTabContent({ activeTab }: ServiceTabContentProps)
             <div>
               <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Servicios de Compra" className="w-full h-full object-cover" data-aos="zoom-in" />
             </div>
-            <div className="space-y-3" data-aos="fade-up">
+            <div className="space-y-3 mx-4 md:mx-0" data-aos="fade-up">
               <h2 className="text-3xl md:text-4xl font-bold uppercase text-gray-600">
                 Servicios de <br /> <span className="text-primary">Compra</span>
               </h2>
@@ -89,7 +89,7 @@ export default function ServiceTabContent({ activeTab }: ServiceTabContentProps)
       {activeTab === "negocios" &&
         <div className="max-w-7xl mx-auto" data-aos="fade-up">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div>
+            <div className="mx-4 md:mx-0">
               <h2 className="text-3xl md:text-4xl font-bold uppercase text-gray-600">
                 Desarrollo de <br /> <span className="text-primary">Negocios</span>
               </h2>

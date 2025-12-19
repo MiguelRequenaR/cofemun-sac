@@ -7,7 +7,7 @@ interface ServiceTabProps {
 
 export default function ServiceTabs({ activeTab, onTabChange }: ServiceTabProps) {
   return (
-    <div className="flex items-center justify-center gap-10 max-w-7xl mx-auto py-10 text-center text-white text-base md:text-lg">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-7xl mx-auto py-10 text-center text-white text-base md:text-lg">
       <button
         onClick={() => onTabChange("compra")}
         className={`text-xl font-bold uppercase transition-colors duration-300 cursor-pointer ${
@@ -17,7 +17,7 @@ export default function ServiceTabs({ activeTab, onTabChange }: ServiceTabProps)
         Servicios de Compra
       </button>
 
-      <hr className="w-px h-12 border-l border-white" />
+      <hr className="w-px h-12 border-l border-white hidden md:block" />
 
       <button
         onClick={() => onTabChange("negocios")}

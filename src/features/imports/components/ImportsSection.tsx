@@ -10,7 +10,7 @@ export default function ImportsSection() {
           <div data-aos="zoom-in">
             <img src="https://images.unsplash.com/photo-1601897690942-bcacbad33e55?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Importaciones" className="w-full h-full object-cover" />
           </div>
-          <div data-aos="fade-up">
+          <div data-aos="fade-up" className="mx-4 md:mx-0">
             <h2 className="text-3xl md:text-4xl font-bold uppercase text-gray-600">
               Diferenciación <br /> <span className="text-primary">Competitiva</span>
             </h2>
@@ -31,7 +31,7 @@ export default function ImportsSection() {
               </span>
             </a>
           </div>
-          <div data-aos="fade-up">
+          <div data-aos="fade-up" className="mx-4 md:mx-0">
             <h2 className="text-3xl md:text-4xl font-bold uppercase text-gray-600">
               Recursos <br /> <span className="text-primary">Integrales</span>
             </h2>
