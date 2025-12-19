@@ -18,22 +18,18 @@ export default function NavBar() {
       label: "Importaciones",
       link: "/importaciones",
     },
-    {
-      label: "Líneas",
-      link: "/lineas",
-    },
   ];
 
   return (
     <header className="bg-primary relative">
       {/* Desktop */}
       <div className="max-w-7xl mx-auto flex justify-between items-center py-5 px-4 md:px-0">
-        <div>
-          {/* <img src="/logoFoodie.svg" alt="logo" /> */}
-          <Link to="/">
+        <Link to="/">
+          <div className="flex items-center gap-2">
+            <img src="/logoCofemun.png" alt="logo" className="w-16 h-16" />
             <h1 className="text-2xl font-bold text-white uppercase">COFEMUN S.A.C.</h1>
-          </Link>
-        </div>
+          </div>
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:block">
@@ -53,7 +49,7 @@ export default function NavBar() {
         </nav>
         <div className="hidden md:block">
           <Link to="/contacto">
-            <button 
+            <button
               className="relative overflow-hidden bg-primary text-white px-5 py-2 uppercase cursor-pointer border border-white group transition-colors duration-500 hover:text-gray-600"
             >
               <span
@@ -65,7 +61,7 @@ export default function NavBar() {
                   transition-transform duration-500 ease-in-out pointer-events-none
                 "
               />
-              <span 
+              <span
                 className="relative z-10 transition-colors duration-500"
               >
                 Contacto
@@ -74,7 +70,7 @@ export default function NavBar() {
           </Link>
         </div>
         {/* Botón del menú hamburguesa para móvil */}
-        <button 
+        <button
           className="md:hidden flex items-center justify-center text-white"
           onClick={() => setMenuOpen(true)}
           aria-label="Abrir menú"
@@ -136,7 +132,7 @@ export default function NavBar() {
                   transition-transform duration-500 ease-in-out pointer-events-none
                 "
               />
-              <span 
+              <span
                 className="relative z-10 transition-colors duration-500"
               >
                 Contacto

@@ -1,13 +1,17 @@
 import { Phone, Mail, Facebook, Instagram, Linkedin, ChevronRight } from "lucide-react"
+import { Link } from "react-router-dom"
 
 export default function Fotter() {
   return (
     <footer className="max-w-7xl mx-auto py-20">
       <div className="flex flex-col md:flex-row" data-aos="fade-up">
         <div className="space-y-5 flex-1 items-center md:items-start flex flex-col">
-          <h1 className="text-primary font-bold text-4xl uppercase text-center md:text-left">
-            COFEMUN S.A.C.
-          </h1>
+          <Link to="/" className="flex items-center gap-2">
+            <img src="/logoCofemun.png" alt="logo" className="w-16 h-16" />
+            <h1 className="text-primary font-bold text-4xl uppercase text-center md:text-left">
+              COFEMUN S.A.C.
+            </h1>
+          </Link>
           <p className="text-primary font-bold text-center md:text-left">Contáctanos:</p>
           <div className="space-y-4">
             <div className="flex items-center justify-center md:justify-start gap-2">
@@ -20,9 +24,9 @@ export default function Fotter() {
             </div>
           </div>
           <div className="flex items-center justify-center md:justify-start gap-5 text-primary">
-            <Facebook className="w-6 h-6" />
-            <Instagram className="w-6 h-6" />
-            <Linkedin className="w-6 h-6" />
+            <Facebook className="w-6 h-6 cursor-pointer" />
+            <Instagram className="w-6 h-6 cursor-pointer" />
+            <Linkedin className="w-6 h-6 cursor-pointer" />
           </div>
         </div>
         <div className="my-8 md:my-0 md:mx-8 border-t-2 md:border-t-0 md:border-l-2 border-primary h-0 md:h-auto"></div>

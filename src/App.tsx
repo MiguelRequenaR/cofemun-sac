@@ -5,6 +5,7 @@ import Home from "@/features/home"
 import About from "@/features/about"
 import Service from "@/features/service"
 import Imports from "@/features/imports"
+import Contact from "@/features/contact"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="/nosotros" element={<About />} />
         <Route path="/servicios" element={<Service />} />
         <Route path="/importaciones" element={<Imports />} />
+        <Route path="/contacto" element={<Contact />} />
       </Route>
     </Routes>
   )
