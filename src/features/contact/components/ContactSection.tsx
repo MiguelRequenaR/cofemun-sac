@@ -6,7 +6,7 @@ export default function ContactSection() {
     <section
     className="max-w-7xl mx-auto py-20">
       <div
-      className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      className="grid grid-cols-1 md:grid-cols-2 gap-10 mx-4 md:px-0">
         <div className="space-y-5" data-aos="fade-up" data-aos-delay="100">
           <div>
             <h2 className="text-2xl font-bold uppercase text-primary">Contáctanos</h2>
