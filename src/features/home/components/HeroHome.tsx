@@ -4,38 +4,38 @@ import { ArrowRight, ArrowLeft } from "lucide-react"
 const carouselImages = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dv",
-    title: "Abastecimiento Industrial",
-    description: "Ponemos a disposición el más amplio portafolio de suministros industriales",
-    buttonLink: "/nosotros",
+    image: "https://images.unsplash.com/photo-1672541298906-4aeb3edd3520?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Materiales de\n Construcción\ny Ferretería",
+    description: "Venta al por mayor de insumos de calidad para obras\n civiles, contratistas y proyectos de infraestructura.",
+    buttonLink: "/catalogo",
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dv",
-    title: "Consolidación",
-    description: "Ofrecemos la consolidación de miles de proveedores en un solo lugar",
-    buttonLink: "/nosotros",
+    image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Abastecimiento\nCorporativo",
+    description: "Somos tu socio estratégico. Centraliza tus compras de\n suministros industriales con stock permanente y facturación formal.",
+    buttonLink: "/servicios",
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dv",
-    title: "Cargos Directos",
-    description: "Realizamos el abastecimiento de suministros industriales locales e importados",
-    buttonLink: "/nosotros",
+    image: "https://images.unsplash.com/photo-1421940943431-d392fcc1079f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Servicios Generales\ny Limpieza",
+    description: "Soluciones integrales de limpieza y mantenimiento para\n edificios e instalaciones industriales.",
+    buttonLink: "/servicios",
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dv",
-    title: "Acuerdos Comerciales",
-    description: "Reducimos la carga operativa y optimizamos los procesos de compras",
-    buttonLink: "/nosotros",
+    image: "https://images.unsplash.com/photo-1559297434-fae8a1916a79?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Logística\ny Transporte",
+    description: "Servicio de transporte y distribución seguro para\n asegurar que tus materiales lleguen a tiempo a la obra.",
+    buttonLink: "/contacto",
   },
   {
     id: 5,
-    image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dv",
-    title: "Importaciones",
-    description: "Ofrecemos el servicio de importaciones desde cualquier parte del mundo",
-    buttonLink: "/nosotros",
+    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Atención\na Licitaciones",
+    description: "Experiencia y capacidad de respuesta para atender\n requerimientos del sector público y privado.",
+    buttonLink: "/contacto",
   },
 ]
 
@@ -65,7 +65,7 @@ export default function HeroHome() {
   }, [currentIndex]);
 
   return (
-    <section className="relative w-full h-[60vh] min-h-[320px] flex items-center overflow-hidden">
+    <section className="relative w-full h-[60vh] min-h-80 flex items-center overflow-hidden">
       {/* Contenedor de slides */}
       <div
         className="flex w-full h-full transition-transform duration-700 ease-in-out"
@@ -88,10 +88,10 @@ export default function HeroHome() {
 
             <div className="relative z-10 flex justify-center w-full h-full" data-aos="fade-up">
               <div className="flex flex-col max-w-7xl w-full px-4 md:px-0 justify-center">
-                <h1 className="text-white text-3xl md:text-7xl font-bold mb-4 drop-shadow-lg uppercase">
+                <h1 className="text-white text-3xl md:text-7xl font-bold mb-4 drop-shadow-lg uppercase whitespace-pre-line">
                   {slide.title}
                 </h1>
-                <p className="text-white text-lg md:text-3xl mb-6 drop-shadow">
+                <p className="text-white text-lg md:text-3xl mb-6 drop-shadow whitespace-pre-line">
                   {slide.description}
                 </p>
                 <a

@@ -3,31 +3,31 @@ import { ArrowRight } from "lucide-react"
 const services = [
   {
     id: 1,
-    title: "Consolidación",
-    description: "Permitimos a nuestros clientes consolidar las compras de miles de suministros industriales en un solo proveedor eficiente, flexible y confiable.",
-    image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    link: "/nosotros",
+    title: "Abastecimiento de Ferretería",
+    description: "Consolidamos tus requerimientos de obra en un solo lugar. Ofrecemos un amplio catálogo en materiales de construcción, herramientas, fontanería, eléctricos y acabados para proyectos de cualquier escala.",
+    image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    link: "/catalogo",
   },
   {
     id: 2,
-    title: "Cargos Directos",
-    description: "Ponemos a disposición de nuestros clientes un equipo logístico con experiencia en gestión de compras e importaciones de suministros industriales. Ofrecemos los servicios requeridos para la fabricación, importación, traslado, instalación, capacitación y puesta en marcha de equipos.",
-    image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    link: "/nosotros",
+    title: "Servicios Generales y Limpieza",
+    description: "Más allá de los suministros, brindamos soluciones de limpieza integral y mantenimiento para edificios e instalaciones industriales (Facility Management), asegurando ambientes operativos y seguros.",
+    image: "https://images.unsplash.com/photo-1421940943431-d392fcc1079f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    link: "/servicios",
   },
   {
     id: 3,
-    title: "Acuerdos Comerciales",
-    description: "Desarrollamos alianzas estratégicas con nuestros clientes para reducir su carga operativa de compras frecuentes a través de acuerdos de precios, consignación de materiales, tercerización de compras y gestión de almacenes.",
-    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    link: "/nosotros",
+    title: "Logística y Transporte",
+    description: "Contamos con capacidad logística y de transporte para asegurar la entrega puntual de tus materiales directamente en obra o almacén, reduciendo tiempos muertos en tu ejecución.",
+    image: "https://images.unsplash.com/photo-1559297434-fae8a1916a79?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    link: "/servicios",
   },
   {
     id: 4,
-    title: "Compras Internacionales",
-    description: "Contamos con un equipo con amplia experiencia en gestión de negocios internacionales, especializado en ofrecer soluciones de abastecimiento globales. Nuestra flexibilidad nos permite adaptarnos a las necesidades de nuestros clientes.",
-    image: "https://images.unsplash.com/photo-1734503937317-3b88a42ac50c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    link: "/nosotros",
+    title: "Atención Corporativa B2B",
+    description: "Diseñado para empresas y contratistas. Ofrecemos facilidades de facturación, líneas de crédito, atención a licitaciones y acuerdos comerciales por volumen para optimizar tu presupuesto.",
+    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    link: "/contacto",
   },
 ]
 
@@ -39,12 +39,13 @@ export default function ServicesGrid() {
       className="max-w-7xl mx-auto">
         <h3
         className="text-2xl md:text-3xl uppercase mb-4 text-center" data-aos="fade-up">
-          Central de Compras de <br /> <span className="font-bold">Suministros Industriales</span>
+          Soluciones Integrales para <br /> <span className="font-bold">Tu Empresa y Proyectos</span>
         </h3>
         <hr className="mb-4 w-30 mx-auto border-2" data-aos="fade-up" />
         <p
         className="text-center text-base md:text-lg py-10" data-aos="fade-up" data-aos-delay="100">
-          Disponemos del portafolio más amplio de suministros para mantenimiento, reparación y operaciones.
+          Desde el abastecimiento de materiales hasta el mantenimiento de instalaciones. 
+          Somos el aliado estratégico que simplifica tu operatividad.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2">
           {services.map((service) => (

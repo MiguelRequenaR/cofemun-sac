@@ -5,32 +5,32 @@ const infoItems = [
   {
     id: 1,
     icon: UserCheck,
-    title: "Atención Personalizada",
+    title: "Atención Técnica Especializada",
   },
   {
     id: 2,
     icon: Target,
-    title: "Enfoque en Operaciones Estrategicas",
+    title: "Soluciones Integrales (Productos + Servicios)",
   },
   {
     id: 3,
     icon: Wallet,
-    title: "Ahorros en Costos Administrativos",
+    title: "Precios Mayoristas Competitivos",
   },
   {
     id: 4,
     icon: Banknote,
-    title: "Acceso a Mayor Financiamiento",
+    title: "Flexibilidad Comercial B2B",
   },
   {
     id: 5,
     icon: ChartLine,
-    title: "Mejor seguimiento de Operaciones",
+    title: "Logística y Entrega a Tiempo",
   },
   {
     id: 6,
     icon: Users,
-    title: "Menos proveedores que evaluar",
+    title: "Centralización de Proveedores",
   }
 ]
 
@@ -57,7 +57,7 @@ export default function InfoHome() {
     <section>
       <div className="bg-primary py-16">
         <h2 className="text-2xl text-white font-bold uppercase text-center" data-aos="zoom-in">
-          Reducimos el costo total de abastecimiento
+          Simplificamos tu Abastecimiento y Mantenimiento
         </h2>
       </div>
       <div className="bg-[#e7f2e0] py-16 relative">

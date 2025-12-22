@@ -2,41 +2,31 @@
 const stats = [
   {
     id: 1,
-    title: "55 años",
-    description: "en el mercado",
+    title: "+9 años",
+    description: "de experiencia en el sector",
   },
   {
     id: 2,
-    title: "4 sedes",
-    description: "Lima, Huancayo, Arequipa y Cusco",
+    title: "100% alcance",
+    description: "Cobertura Nacional",
   },
   {
     id: 3,
-    title: "300 colaboradores",
-    description: "a tu servicio"
+    title: "+5000 productos",
+    description: "en nuestro catálogo"
   },
   {
     id: 4,
-    title: "1000+ proveedores",
-    description: "en nuestro portafolio"
+    title: "3 unidades",
+    description: "de negocio: ferretería, construcción y servicios"
   },
-  {
-    id: 5,
-    title: "8 líneas",
-    description: "de abastecimiento Industrial"
-  },
-  {
-    id: 6,
-    title: "60 ejecutivos",
-    description: "de compras e importaciones"
-  }
 ]
 
 export default function StatsSection() {
   return (
     <section className="bg-[#f2f2f2] py-20">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {stats.map((stat) => (
             <div key={stat.id} data-aos="zoom-in">
               <h3 className="text-3xl md:text-5xl font-bold text-primary text-center md:text-left">

@@ -2,28 +2,28 @@
 const values = [
   {
     id: 1,
-    title: "Eficiencia",
-    description: "Cumplimos con la promesa al cliente optimizando el uso de los recursos disponibles.",
+    title: "Compromiso y Formalidad",
+    description: "Operamos con total transparencia, garantizando facturación clara y cumplimiento de plazos.",
   },
   {
     id: 2,
     title: "Flexibilidad",
-    description: "Adaptamos nuestros servicios a las necesidades de nuestros clientes, siempre con la más alta calidad y eficiencia.",
+    description: "Nos adaptamos a los requerimientos específicos de cada obra o empresa, ofreciendo soluciones a medida.",
   },
   {
     id: 3,
-    title: "Confianza",
-    description: "Garantizamos la calidad de nuestros servicios y la confianza de nuestros clientes.",
+    title: "Seguridad",
+    description: "Priorizamos la calidad de los materiales y la seguridad en nuestros servicios de limpieza y transporte.",
   },
   {
     id: 4,
-    title: "Innovación",
-    description: "Innovamos constantemente para ofrecer soluciones de abastecimiento de suministros industriales a la más alta calidad y eficiencia.",
+    title: "Vocación de Servicio",
+    description: "Asesoramos técnicamente a nuestros clientes para optimizar sus presupuestos sin sacrificar calidad.",
   },
   {
     id: 5,
-    title: "Integridad",
-    description: "Nos comportamos con ética y transparencia en todas nuestras actividades.",
+    title: "Puntualidad",
+    description: "Entendemos que en un proyecto, el tiempo es dinero. Nuestra logística está enfocada en cumplir los cronogramas.",
   },
   {
     id: 6,
@@ -39,33 +39,30 @@ export default function IdentitySection() {
       <div
       className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-4 md:mx-0">
         <div
-        className="bg-[#f1ffe8] text-white p-5 rounded-lg cursor-pointer hover:scale-105 transition-all duration-500"
-        data-aos="fade-up">
+        className="bg-[#f1ffe8] text-white p-5 rounded-lg cursor-pointer hover:scale-105 transition-all duration-500">
           <h3
           className="text-3xl text-primary font-bold uppercase mb-4 text-center">Misión</h3>
           <p
           className="text-primary text-lg">
-            Brindar soluciones de abastecimiento de suministros industriales a nuestros clientes, con la más alta calidad y eficiencia, a través de la consolidación de compras, cargos directos, acuerdos comerciales y compras internacionales.
+            Proveer soluciones integrales de abastecimiento y servicios generales a nuestros clientes, garantizando la calidad de los productos, la puntualidad en la logística y la eficiencia en el mantenimiento de sus instalaciones, contribuyendo al éxito de sus proyectos.
           </p>
         </div>
         <div
-        className="bg-[#f1ffe8] text-white p-5 rounded-lg cursor-pointer hover:scale-105 transition-all duration-500"
-        data-aos="fade-up" data-aos-delay="100">
+        className="bg-[#f1ffe8] text-white p-5 rounded-lg cursor-pointer hover:scale-105 transition-all duration-500">
           <h3
           className="text-3xl text-primary font-bold uppercase mb-4 text-center">Visión</h3>
           <p
           className="text-primary text-lg">
-            Ser el mejor aliado de nuestros clientes, ofreciendo soluciones de abastecimiento de suministros industriales a la más alta calidad y eficiencia, a través de la consolidación de compras, cargos directos, acuerdos comerciales y compras internacionales.
+            Ser reconocidos como el aliado estratégico más confiable en el sector de construcción y mantenimiento industrial en el Perú, destacándonos por nuestra capacidad de respuesta, formalidad y versatilidad operativa.
           </p>
         </div>
         <div
-        className="bg-[#f1ffe8] text-white p-5 rounded-lg cursor-pointer hover:scale-105 transition-all duration-500"
-        data-aos="fade-up" data-aos-delay="200">
+        className="bg-[#f1ffe8] text-white p-5 rounded-lg cursor-pointer hover:scale-105 transition-all duration-500">
           <h3
           className="text-3xl text-primary font-bold uppercase mb-4 text-center">Filosofía</h3>
           <p
           className="text-lg text-primary">
-            Ofrecer soluciones de abastecimiento de suministros industriales a nuestros clientes, con la más alta calidad y eficiencia, a través de la consolidación de compras, cargos directos, acuerdos comerciales y compras internacionales.
+            Creemos en la simplificación operativa. No solo vendemos productos; vendemos el tiempo que nuestros clientes ahorran al centralizar sus compras y servicios en un solo proveedor formal y eficiente.
           </p>
         </div>
       </div>

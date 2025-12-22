@@ -12,7 +12,7 @@ export default function HeroAbout() {
         </h1>
         <div className="w-full bg-primary/90" data-aos="fade-up" data-aos-delay="100">
           <p className="max-w-7xl mx-auto py-10 text-center text-white text-base md:text-lg">
-            COFEMUN S.A.C. empresa peruana líder en la gestión de abastecimiento de suministros industriales, desempeñandose como una central de compras especializada en productos para mantenimiento, reparación y operaciones (MRO). Nos hemos consolidado como socios estratégicos de las principales empresas y proyectos del país, y distribuimos marcas reconocidas tanto a nivel nacional como internacional.
+            COFEMUN S.A.C. es una empresa peruana dedicada a la comercialización integral de materiales de construcción, ferretería y suministros industriales. Desde el año 2016, nos hemos posicionado como un socio estratégico para contratistas y empresas, brindando no solo productos de calidad, sino soluciones logísticas y de servicios generales que facilitan la operatividad de sus proyectos.
           </p>
         </div>
       </div>
