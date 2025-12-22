@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom"
 import NavBar from "@/components/NavBar"
 import Fotter from "@/components/Fotter"
+import WhatsAppButton from "@/utils/WhatsAppButton"
 import { useLenis } from "@/hooks/useLenis"
 
 export default function MainLayout() {
@@ -12,6 +13,7 @@ export default function MainLayout() {
         <Outlet />
       </main>
       <Fotter />
+      <WhatsAppButton />
     </div>
   )
 }
