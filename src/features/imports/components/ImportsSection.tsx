@@ -16,9 +16,9 @@ export default function ImportsSection() {
             </h2>
             <hr className="w-30 border-2 border-primary mb-4" />
             <p className="text-gray-600">
-              Ofrecemos la gestión de compras con una serie de proveedores alrededor del mundo, garantizando precios competitivos a partir de alianzas comerciales con cientos de proveedores en América, Europa, Oceanía y Asia. <br /> <br />
-              Brindamos un nivel de servicio superior, que busca entregar a tiempo lo ofrecido, administrando eficientemente los tiempos a precios competitivos. <br /> <br />
-              Ofrecemos diversos servicios: entregas puerta a puerta llegando hasta la operación, campamento o almacén del cliente; tercerización con proveedores extranjeros; servicios post venta, gestión de garantías y servicio técnico respaldado por fabricantes extranjeros.
+              Brindamos un servicio de despacho confiable, enfocado en entregar a tiempo lo ofrecido. Ofrecemos entregas puerta a puerta, llegando hasta tu operación, campamento minero, almacén o pie de obra en cualquier punto del territorio nacional.
+              <br /><br />
+              Adicionalmente, nuestra gestión simplifica tu operación contable. Al consolidar múltiples categorías (desde obra gruesa hasta acabados) en un solo proveedor confiable, reduces la carga administrativa de tu empresa, asegurando homogeneidad en la calidad de los materiales y una facturación ordenada por centro de costos.
             </p>
             <a href="/contacto"
               className="relative inline-block overflow-hidden bg-primary text-white px-5 py-2 uppercase cursor-pointer border border-primary group transition-colors duration-500 hover:text-gray-600 mt-10"
@@ -33,15 +33,13 @@ export default function ImportsSection() {
           </div>
           <div data-aos="fade-up" className="mx-4 md:mx-0">
             <h2 className="text-3xl md:text-4xl font-bold uppercase text-gray-600">
-              Recursos <br /> <span className="text-primary">Integrales</span>
+              Alcance y <br /> <span className="text-primary">Cobertura</span>
             </h2>
             <hr className="w-30 border-2 border-primary mb-4" />
             <p className="text-gray-600">
-              Contamos con un equipo de 25 ejecutivos de comercio exterior con experiencia en gestión de negocios internacionales.
-              <br /> <br />
-              Trabajamos con un sistema de gestión que facilita costear de manera rápida y eficiente, además de permitir la trazabilidad y seguimiento de carga en tiempo real.
-              <br /> <br />
-              Gestionamos con alianzas con cientos de proveedores alrededor del mundo, servicios de transporte internacional, navieras y aerolíneas de carga.
+              Brindamos un servicio de despacho confiable, enfocado en entregar a tiempo lo ofrecido. Ofrecemos entregas puerta a puerta, llegando hasta tu operación, campamento minero, almacén o pie de obra en cualquier punto del territorio nacional.
+              <br /><br />
+              Nuestra red de transporte cumple con estrictos protocolos de seguridad y embalaje técnico. Ya sea carga pesada, tuberías de gran longitud o materiales frágiles, garantizamos que la mercadería arribe en perfectas condiciones, minimizando mermas por transporte y evitando retrasos en tu cronograma de ejecución.
             </p>
             <a href="/contacto"
               className="relative inline-block overflow-hidden bg-primary text-white px-5 py-2 uppercase cursor-pointer border border-primary group transition-colors duration-500 hover:text-gray-600 mt-10"

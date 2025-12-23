@@ -14,7 +14,7 @@ export default function ServiceTabs({ activeTab, onTabChange }: ServiceTabProps)
           activeTab === "compra" ? "text-secondary" : "hover:text-secondary"
         }`}
       >
-        Servicios de Compra
+        Soluciones de Abastecimiento
       </button>
 
       <hr className="w-px h-12 border-l border-white hidden md:block" />
@@ -25,7 +25,7 @@ export default function ServiceTabs({ activeTab, onTabChange }: ServiceTabProps)
           activeTab === "negocios" ? "text-secondary" : "hover:text-secondary"
         }`}
       >
-        Desarrollo de Negocios
+        Unidades de Negocio
       </button>
     </div>
   )

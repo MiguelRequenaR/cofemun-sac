@@ -15,22 +15,22 @@ interface DropdownSection {
 
 const dropdowns: DropdownSection[] = [
   {
+    id: "construccion",
+    title: "División de Construcción y Ferretería",
+    content:
+      "Suministro integral de materiales para obra gruesa y acabados: Cemento, fierros, agregados, ladrillos y herramientas eléctricas de alto rendimiento para el constructor."
+  },
+  {
+    id: "servicios",
+    title: "División de Fontanería y Calefacción",
+    content:
+      "Especialistas en sistemas de conducción de fluidos. Distribuimos tuberías PVC/CPVC/Fierro, válvulas industriales, grifería y accesorios para redes de agua y desagüe."
+  },
+  {
     id: "seguridad",
-    title: "División de Seguridad Industrial",
+    title: "División de Seguridad Industrial (EPP)",
     content:
-      "Contamos con la distribución de reconocidas marcas de equipos de protección personal, (EPP). Ofrecemos a nuestros clientes productos de alta calidad, con normativas nacionales e internacionales.",
-  },
-  {
-    id: "electricos",
-    title: "División de Elétricos e Iluminación",
-    content:
-      "Distribuimos productos eléctricos y de iluminación de alta calidad, con normativas nacionales e internacionales. Para operaciones y proyectos, brindando soluciones según el tipo de trabajo a realizar.",
-  },
-  {
-    id: "herramientas",
-    title: "División de Herramientas Industriales",
-    content:
-      "Representamos marcas de herramientas industriales de alta calidad, con normativas nacionales e internacionales. Para operaciones y proyectos, brindando soluciones según el tipo de trabajo a realizar.",
+      "Equipamiento de protección personal para riesgos laborales. Abastecemos cascos, lentes, guantes, calzado de seguridad y ropa de trabajo con certificación técnica."
   },
 ];
 
@@ -51,26 +51,26 @@ export default function ServiceTabContent({ activeTab }: ServiceTabContentProps)
             </div>
             <div className="space-y-3 mx-4 md:mx-0" data-aos="fade-up">
               <h2 className="text-3xl md:text-4xl font-bold uppercase text-gray-600">
-                Servicios de <br /> <span className="text-primary">Compra</span>
+                Soluciones de <br /> <span className="text-primary">Abastecimiento</span>
               </h2>
               <hr className="w-30 border-2 border-primary mb-4" />
               <h3 className="text-2xl font-bold uppercase text-primary">
-                Consolidación
+                Venta Mayorista Integral
               </h3>
               <p className="text-gray-600">
-                Permitimos a nuestros clientes consolidar las compras de miles de suministros industriales en un solo proveedor eficiente, flexible y confiable.
+                Centralizamos tus requerimientos. En lugar de lidiar con 10 proveedores distintos para cemento, fierros, limpieza y acabados, nosotros consolidamos todo en una sola orden de compra y una sola factura, simplificando tu gestión administrativa.
               </p>
               <h3 className="text-2xl font-bold uppercase text-primary">
-                Cargos Directos
+                Stock y Diponibilidad
               </h3>
               <p className="text-gray-600">
-                Ponemos a disposición de nuestros clientes un equipo logístico con experiencia en gestión de compras e importaciones de suministros industriales. Ofrecemos los servicios requeridos para la fabricación, importación, traslado, instalación, capacitación y puesta en marcha de equipos.
+                Garantizamos la continuidad de tus operaciones. Mantenemos un inventario rotativo de los productos de mayor demanda para asegurar que tengas los insumos cuando los necesitas, evitando paradas en obra.
               </p>
               <h3 className="text-2xl font-bold uppercase text-primary">
-                Acuerdos Comerciales
+                Acuerdos Corporativos B2B
               </h3>
               <p className="text-gray-600">
-                Desarrollamos alianzas estratégicas con nuestros clientes para reducir su carga operativa de compras frecuentes a través de acuerdos de precios, consignación de materiales, tercerización de compras y gestión de almacenes.
+                Adaptamos nuestra propuesta comercial a tu empresa. Ofrecemos líneas de crédito, homologación de proveedores y atención preferencial para áreas de compras y logística.
               </p>
               <a href="/contacto"
                 className="relative inline-block overflow-hidden bg-primary text-white px-5 py-2 uppercase cursor-pointer border border-primary group transition-colors duration-500 hover:text-gray-600"
@@ -91,7 +91,7 @@ export default function ServiceTabContent({ activeTab }: ServiceTabContentProps)
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="mx-4 md:mx-0">
               <h2 className="text-3xl md:text-4xl font-bold uppercase text-gray-600">
-                Desarrollo de <br /> <span className="text-primary">Negocios</span>
+                Unidades de <br /> <span className="text-primary">Negocio</span>
               </h2>
               <hr className="w-30 border-2 border-primary mb-4" />
               <div className="mt-5">
@@ -105,7 +105,7 @@ export default function ServiceTabContent({ activeTab }: ServiceTabContentProps)
                         focus:outline-none cursor-pointer
                         `}
                     >
-                      <span>{section.title}</span>
+                      <span className="text-2xl">{section.title}</span>
                       <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-300 ${open === section.id ? "rotate-180" : "rotate-0"}`} />
                     </button>
                     <div
