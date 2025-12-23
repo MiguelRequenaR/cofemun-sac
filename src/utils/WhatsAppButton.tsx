@@ -2,7 +2,7 @@
 export default function WhatsAppButton() {
 
   const phone = '51981067345'
-  const defaultMessage = 'Hola, me interesan sus servicios'
+  const defaultMessage = 'Hola, estoy interesado en sus servicios y productos, ¿pueden ayudarme?'
   const whatsappUrl = `https://wa.me/${phone}?text=${defaultMessage}`
 
   const handleClick = () => {

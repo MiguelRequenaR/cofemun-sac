@@ -18,6 +18,10 @@ export default function NavBar() {
       label: "Distribución",
       link: "/distribucion",
     },
+    {
+      label: "Productos",
+      link: "/productos"
+    }
   ];
 
   return (
