@@ -15,8 +15,8 @@ export default function NavBar() {
       link: "/servicios",
     },
     {
-      label: "Importaciones",
-      link: "/importaciones",
+      label: "Distribución",
+      link: "/distribucion",
     },
   ];
 
