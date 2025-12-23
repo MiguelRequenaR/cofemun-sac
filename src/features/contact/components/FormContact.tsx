@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Send, Check } from 'lucide-react';
 import { whatsappMessage } from '@/utils/whatsappMessage';
 
 export default function FormContact() {
@@ -9,6 +10,8 @@ export default function FormContact() {
     phone: '',
     message: ''
   });
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -31,86 +34,125 @@ export default function FormContact() {
 
     window.open(whatsappUrl, '_blank');
 
-    setFormData({
-      name: '',
-      company: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
+    setIsSubmitted(true);
+
+    // Limpiar el formulario después de 2 segundos
+    setTimeout(() => {
+      setFormData({
+        name: '',
+        company: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+      setIsSubmitted(false);
+    }, 2000);
   };
 
   return (
-    <form className="space-y-4" data-aos="fade-up" data-aos-delay="200" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        placeholder="Nombre y Apellido"
-        className="w-full p-2 border-2 border-secondary rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-secondary"
-        value={formData.name}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="text"
-        id="company"
-        name="company"
-        placeholder="Empresa (Opcional)"
-        className="w-full p-2 border-2 border-secondary rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-secondary"
-        value={formData.company}
-        onChange={handleChange}
-      />
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Email"
-        className="w-full p-2 border-2 border-secondary rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-secondary"
-        value={formData.email}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="tel"
-        id="phone"
-        name="phone"
-        placeholder="Teléfono"
-        className="w-full p-2 border-2 border-secondary rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-secondary"
-        value={formData.phone}
-        onChange={handleChange}
-        required
-      />
-      <textarea
-        id="message"
-        name="message"
-        placeholder="Mensaje"
-        className="w-full p-2 border-2 border-secondary rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-secondary h-32"
-        value={formData.message}
-        onChange={handleChange}
-        required
-      />
-      <button 
-        type="submit" 
-        className="w-full relative overflow-hidden bg-primary text-white px-5 py-2 uppercase cursor-pointer border border-transparent group transition-colors duration-500 hover:text-gray-600 hover:border-primary"
-        data-aos="fade-up" data-aos-delay="300"
-      >
-        <span
-          className="
-            absolute inset-0 
-            bg-secondary
-            translate-y-full
-            group-hover:translate-y-0
-            transition-transform duration-500 ease-in-out pointer-events-none
-          "
-        />
-        <span
-          className="relative z-10 transition-colors duration-500"
-        >
-          Enviar Mensaje
-        </span>
-      </button>
+    <div className="bg-white border-2 border-primary rounded-lg p-8 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div>
+          <label className="block text-gray-700 font-semibold mb-2">
+            Nombre y Apellido <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+            placeholder="Ingrese su nombre completo"
+          />
+        </div>
 
-    </form>
+        <div>
+          <label className="block text-gray-700 font-semibold mb-2">
+            Empresa
+          </label>
+          <input
+            type="text"
+            id="company"
+            name="company"
+            value={formData.company}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+            placeholder="Nombre de su empresa (opcional)"
+          />
+        </div>
+
+        <div>
+          <label className="block text-gray-700 font-semibold mb-2">
+            Correo Electrónico <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+            placeholder="correo@ejemplo.com"
+          />
+        </div>
+
+        <div>
+          <label className="block text-gray-700 font-semibold mb-2">
+            Teléfono <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+            placeholder="+51 987 654 321"
+          />
+        </div>
+
+        <div>
+          <label className="block text-gray-700 font-semibold mb-2">
+            Mensaje <span className="text-red-500">*</span>
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            rows={5}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+            placeholder="Escriba su mensaje aquí..."
+          />
+        </div>
+
+        <button
+          type="submit"
+          disabled={isSubmitted}
+          className={`w-full text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2 ${
+            isSubmitted 
+              ? 'bg-green-600 cursor-not-allowed' 
+              : 'bg-primary hover:bg-primary/90 cursor-pointer'
+          }`}
+        >
+          {isSubmitted ? (
+            <>
+              <Check className="w-5 h-5" />
+              Enviado
+            </>
+          ) : (
+            <>
+              <Send className="w-5 h-5" />
+              Enviar Mensaje
+            </>
+          )}
+        </button>
+      </form>
+    </div>
   )
 }

@@ -8,6 +8,8 @@ import Imports from "@/features/imports"
 import Products from "@/features/products"
 import ProductDetailPage from "@/features/products/pages/ProductDetailPage"
 import Contact from "@/features/contact"
+import ProteccionDatos from "@/features/proteccion-de-datos"
+import LibroReclamaciones from "@/features/libro-de-reclamaciones"
 import ScrollToTop from "@/utils/scrollToTop"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -35,6 +37,8 @@ function App() {
           <Route path="/productos" element={<Products />} />
           <Route path="/productos/:slug" element={<ProductDetailPage />} />
           <Route path="/contacto" element={<Contact />} />
+          <Route path="/proteccion-de-datos" element={<ProteccionDatos />} />
+          <Route path="/libro-de-reclamaciones" element={<LibroReclamaciones />} />
         </Route>
       </Routes>
     </>

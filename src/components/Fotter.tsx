@@ -34,40 +34,32 @@ export default function Fotter() {
           <ul>
             <li className="flex items-center gap-2">
               <ChevronRight className="w-4 h-4" />
-              <a href="/nosotros" className="hover:underline">Nosotros</a>
+              <Link to="/nosotros" className="hover:underline">Nosotros</Link>
             </li>
             <li className="flex items-center gap-2">
               <ChevronRight className="w-4 h-4" />
-              <a href="/servicios" className="hover:underline">Servicios</a>
+              <Link to="/servicios" className="hover:underline">Servicios</Link>
             </li>
             <li className="flex items-center gap-2">
               <ChevronRight className="w-4 h-4" />
-              <a href="/importaciones" className="hover:underline">Importaciones</a>
+              <Link to="/distribucion" className="hover:underline">Distribución</Link>
             </li>
             <li className="flex items-center gap-2">
               <ChevronRight className="w-4 h-4" />
-              <a href="/lineas" className="hover:underline">Líneas</a>
-            </li>
-            <li className="flex items-center gap-2">
-              <ChevronRight className="w-4 h-4" />
-              <a href="/marcas" className="hover:underline">Marcas</a>
-            </li>
-            <li className="flex items-center gap-2">
-              <ChevronRight className="w-4 h-4" />
-              <a href="/catalogos" className="hover:underline">Catálogos</a>
+              <Link to="/productos" className="hover:underline">Productos</Link>
             </li>
           </ul>
         </div>
         <div className="my-8 md:my-0 md:mx-8 border-t-2 md:border-t-0 md:border-l-2 border-primary h-0 md:h-auto"></div>
         <div className="flex-1 flex flex-col justify-center items-center md:items-start space-y-4 text-primary">
           <ul>
-          <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2">
               <ChevronRight className="w-4 h-4" />
-              <a href="/proteccion-de-datos" className="hover:underline">Protección de datos</a>
+              <Link to="/proteccion-de-datos" className="hover:underline">Protección de datos</Link>
             </li>
             <li className="flex items-center gap-2">
               <ChevronRight className="w-4 h-4" />
-              <a href="/libro-de-reclamaciones" className="hover:underline">Libro de reclamaciones</a>
+              <Link to="/libro-de-reclamaciones" className="hover:underline">Libro de reclamaciones</Link>
             </li>
           </ul>
         </div>
