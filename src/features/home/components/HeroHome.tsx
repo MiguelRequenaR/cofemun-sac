@@ -7,7 +7,7 @@ const carouselImages = [
     image: "https://images.unsplash.com/photo-1672541298906-4aeb3edd3520?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Materiales de\n Construcción\ny Ferretería",
     description: "Distribución mayorista de cemento, fierros, tuberías y acabados.\n Todo lo necesario para obras civiles e infraestructura.",
-    buttonLink: "/catalogo",
+    buttonLink: "/productos",
   },
   {
     id: 2,
@@ -21,14 +21,14 @@ const carouselImages = [
     image: "https://images.unsplash.com/photo-1559297434-fae8a1916a79?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Logística\ny Transporte",
     description: "Logística eficiente para asegurar que tus materiales de construcción\n lleguen a tiempo y seguros a tu punto de entrega.",
-    buttonLink: "/contacto",
+    buttonLink: "/servicios",
   },
   {
     id: 4,
     image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Atención\na Proyectos",
     description: "Experiencia y solidez desde el 2016 para atender grandes\n requerimientos del sector público y privado con total garantía.",
-    buttonLink: "/contacto",
+    buttonLink: "/servicios",
   },
 ]
 
