@@ -28,7 +28,7 @@ export default function WhatsAppButton() {
       "
       aria-label="Contactar por WhatsApp"
     >
-      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.freebiesupply.com%2Fimages%2Flarge%2F2x%2Fwhatsapp-logo-transparent.png&f=1&nofb=1&ipt=32eb3e8172bbbb98c5d7c8f98ec1f90a42bc584c442a0590604141610897af63" alt="WhatsApp" className="w-10 h-10 object-cover" />
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.freebiesupply.com%2Fimages%2Flarge%2F2x%2Fwhatsapp-logo-transparent.png&f=1&nofb=1&ipt=32eb3e8172bbbb98c5d7c8f98ec1f90a42bc584c442a0590604141610897af63" alt="WhatsApp" className="md:w-10 md:h-10 object-cover" />
       
       <span className="
         absolute right-full mr-3
