@@ -4,21 +4,21 @@ import { ArrowRight, ArrowLeft } from "lucide-react"
 const products = [
   {
     id: 1,
-    title: "Materiales de Construcción",
-    image: "https://images.unsplash.com/photo-1580810734898-5e1753f23337?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    link: "/productos/materiales-construccion",
+    title: "Materiales de Ferretería",
+    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bricocee.com%2Fimages%2Fbricocee%2Fferreteria-materiales-construccion-cee.jpg&f=1&nofb=1&ipt=0c7234ddf57e6a6eb244ceb1facf5800c9c97dfbaf1106263a7d7de36f9e08da",
+    link: "/productos/materiales-ferreteria",
   },
   {
     id: 2,
-    title: "Herramientas Profesionales",
+    title: "Herramientas Electricas y Manuales",
     image: "https://images.unsplash.com/photo-1518709414768-a88981a4515d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    link: "/productos/herramientas-profesionales",
+    link: "/productos/herramientas-electricas-manuales",
   },
   {
     id: 3,
-    title: "Gasfitería y Fontanería",
+    title: "Valvulas, Conexiones y Pernos",
     image: "https://images.unsplash.com/photo-1642797735471-3e90055c5ff9?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    link: "/productos/gasfiteria-fontaneria",
+    link: "/productos/valvulas-conexiones",
   },
   {
     id: 4,
@@ -83,23 +83,23 @@ export default function ProductsHome() {
 
   return (
     <section
-      className="bg-linear-to-b from-[#344920] to-[#161a10] py-20">
+      className="bg-white py-20">
       <div
         className="flex flex-col md:flex-row ml-0 md:ml-[310px] items-center gap-5 md:gap-30">
         <div className="flex flex-col items-center md:items-start text-center md:text-left w-full" data-aos="fade-up">
-          <h3 className="text-3xl uppercase mb-4 text-white">
-            Líneas de <br /> <span className="font-bold text-secondary">Abastecimiento</span>
+          <h3 className="text-3xl uppercase mb-4 text-primary">
+            Líneas de <br /> <span className="font-bold text-primary">Abastecimiento</span>
           </h3>
-          <hr className="mb-4 w-30 border-2 text-white mx-auto md:mx-0" />
-          <p className="text-white text-lg mb-10">
+          <hr className="mb-4 w-30 border-2 text-primary mx-auto md:mx-0" />
+          <p className="text-primary text-lg mb-10">
             Contamos con una amplia variedad de suministros industriales a tu disposición.
           </p>
           <a
             href="/lineas"
-            className="inline-block relative w-fit overflow-hidden bg-transparent text-white px-5 py-2 uppercase cursor-pointer border border-white group transition-colors duration-500 hover:text-gray-600"
+            className="inline-block relative w-fit overflow-hidden bg-transparent text-primary px-5 py-2 uppercase cursor-pointer border border-primary group transition-colors duration-500 hover:text-white rounded-full"
           >
             <span
-              className="absolute inset-0 bg-secondary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out pointer-events-none"
+              className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out pointer-events-none"
             />
             <span className="relative z-10 transition-colors duration-500">
               Conoce Más
@@ -125,7 +125,7 @@ export default function ProductsHome() {
                   alt={product.title}
                   className="w-full h-[450px] object-cover rounded group-hover/card:opacity-80 transition duration-300"
                 />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/50 group-hover/card:bg-[#6aa635]/80 transition duration-500">
+                <div className="absolute inset-0 flex items-center justify-center bg-black/50 group-hover/card:bg-primary/80 transition duration-500">
                   <h4 className="text-white text-3xl font-semibold drop-shadow text-center uppercase">
                     {product.title}
                   </h4>
@@ -133,7 +133,7 @@ export default function ProductsHome() {
                 <span
                   className="absolute left-1/2 bottom-6 -translate-x-1/2 flex items-center justify-center text-white text-lg z-10 transition-all duration-500"
                 >
-                  Conoce Más
+                  Ver Más
                   <span className="group/card relative">
                     <ArrowRight className="w-4 h-4 text-white ml-2 transition-all duration-500 group-hover/card:translate-x-10" />
                   </span>

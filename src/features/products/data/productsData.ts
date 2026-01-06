@@ -16,9 +16,9 @@ export interface Product {
 export const productsData: Product[] = [
   {
     id: 1,
-    title: "Materiales de Construcción",
-    slug: "materiales-construccion",
-    image: "https://images.unsplash.com/photo-1580810734898-5e1753f23337?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Materiales de Ferretería",
+    slug: "materiales-ferreteria",
+    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bricocee.com%2Fimages%2Fbricocee%2Fferreteria-materiales-construccion-cee.jpg&f=1&nofb=1&ipt=0c7234ddf57e6a6eb244ceb1facf5800c9c97dfbaf1106263a7d7de36f9e08da",
     description: "Materiales de construcción de alta calidad para todo tipo de proyectos. Contamos con una amplia gama de productos que cumplen con los más altos estándares de calidad y normativas peruanas.",
     relatedProducts: [
       {
@@ -55,8 +55,8 @@ export const productsData: Product[] = [
   },
   {
     id: 2,
-    title: "Herramientas Profesionales",
-    slug: "herramientas-profesionales",
+    title: "Herramientas Electricas y Manuales",
+    slug: "herramientas-electricas-manuales",
     image: "https://images.unsplash.com/photo-1518709414768-a88981a4515d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Herramientas profesionales de las mejores marcas para trabajos de construcción, carpintería y más. Garantizamos durabilidad y precisión en cada herramienta.",
     relatedProducts: [
@@ -84,8 +84,8 @@ export const productsData: Product[] = [
   },
   {
     id: 3,
-    title: "Gasfitería y Fontanería",
-    slug: "gasfiteria-fontaneria",
+    title: "Valvulas, Conexiones y Pernos",
+    slug: "valvulas-conexiones",
     image: "https://images.unsplash.com/photo-1642797735471-3e90055c5ff9?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Todo lo necesario para instalaciones de gasfitería y fontanería. Productos de calidad para sistemas de agua, drenaje y calefacción.",
     relatedProducts: [

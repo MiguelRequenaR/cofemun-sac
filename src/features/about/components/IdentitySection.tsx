@@ -39,36 +39,36 @@ export default function IdentitySection() {
       <div
       className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-4 md:mx-0">
         <div
-        className="bg-[#f1ffe8] text-white p-5 rounded-lg cursor-pointer hover:scale-105 transition-all duration-500">
+        className="bg-primary text-white p-5 rounded-lg cursor-pointer hover:scale-105 transition-all duration-500">
           <h3
-          className="text-3xl text-primary font-bold uppercase mb-4 text-center">Misión</h3>
+          className="text-3xl text-white font-bold uppercase mb-4 text-center">Misión</h3>
           <p
-          className="text-primary text-lg">
+          className="text-white text-lg text-justify">
             Proveer soluciones integrales de abastecimiento y servicios generales a nuestros clientes, garantizando la calidad de los productos, la puntualidad en la logística y la eficiencia en el mantenimiento de sus instalaciones, contribuyendo al éxito de sus proyectos.
           </p>
         </div>
         <div
-        className="bg-[#f1ffe8] text-white p-5 rounded-lg cursor-pointer hover:scale-105 transition-all duration-500">
+        className="bg-primary text-white p-5 rounded-lg cursor-pointer hover:scale-105 transition-all duration-500">
           <h3
-          className="text-3xl text-primary font-bold uppercase mb-4 text-center">Visión</h3>
+          className="text-3xl text-white font-bold uppercase mb-4 text-center">Visión</h3>
           <p
-          className="text-primary text-lg">
+          className="text-white text-lg text-justify">
             Ser reconocidos como el aliado estratégico más confiable en el sector de construcción y mantenimiento industrial en el Perú, destacándonos por nuestra capacidad de respuesta, formalidad y versatilidad operativa.
           </p>
         </div>
         <div
-        className="bg-[#f1ffe8] text-white p-5 rounded-lg cursor-pointer hover:scale-105 transition-all duration-500">
+        className="bg-primary text-white p-5 rounded-lg cursor-pointer hover:scale-105 transition-all duration-500">
           <h3
-          className="text-3xl text-primary font-bold uppercase mb-4 text-center">Filosofía</h3>
+          className="text-3xl text-white font-bold uppercase mb-4 text-center">Filosofía</h3>
           <p
-          className="text-lg text-primary">
+          className="text-white text-lg text-justify">
             Creemos en la simplificación operativa. No solo vendemos productos; vendemos el tiempo que nuestros clientes ahorran al centralizar sus compras y servicios en un solo proveedor formal y eficiente.
           </p>
         </div>
       </div>
       <div
       className="py-5 md:py-20 mx-4 md:mx-0">
-        <h3 className="uppercase text-gray-600 text-3xl md:text-5xl font-bold mb-4 text-center md:text-left" data-aos="fade-up">
+        <h3 className="uppercase text-blue-500 text-3xl md:text-5xl font-bold mb-4 text-center md:text-left" data-aos="fade-up">
           Nuestros <br /><span className="text-primary">Valores</span>
         </h3>
         <hr className="w-30 border-2 border-primary mx-auto md:mx-0" data-aos="fade-up" data-aos-delay="100" />
@@ -77,7 +77,7 @@ export default function IdentitySection() {
           {values.map((value) => (
             <div key={value.id} className="relative z-10" data-aos="fade-up" data-aos-delay="200">
               <h4 className="text-xl md:text-2xl font-bold uppercase text-primary text-center md:text-left">{value.title}</h4>
-              <p className="text-base md:text-lg text-secondary text-center md:text-left">{value.description}</p>
+              <p className="text-base md:text-lg text-blue-500 text-center md:text-left">{value.description}</p>
             </div>
           ))}
         </div>

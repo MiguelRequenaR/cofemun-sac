@@ -54,7 +54,7 @@ export default function NavBar() {
         <div className="hidden md:block">
           <Link to="/contacto">
             <button
-              className="relative overflow-hidden bg-primary text-white px-5 py-2 uppercase cursor-pointer border border-white group transition-colors duration-500 hover:text-gray-600"
+              className="relative overflow-hidden bg-primary text-white px-5 py-2 uppercase cursor-pointer border border-white group transition-colors duration-500 hover:text-gray-600 rounded-full"
             >
               <span
                 className="

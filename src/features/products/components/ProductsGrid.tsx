@@ -21,7 +21,7 @@ export default function ProductsGrid() {
                 alt={product.title}
                 className="w-full h-[450px] object-cover"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-black/50 group-hover:bg-[#6aa635]/80 transition duration-500">
+              <div className="absolute inset-0 flex items-center justify-center bg-black/50 group-hover:bg-primary/80 transition duration-500">
 
                 <h2
                   className="absolute text-white text-3xl font-semibold drop-shadow text-center uppercase">

@@ -9,7 +9,7 @@ export default function CallToAction() {
         className="absolute inset-0 w-full h-full object-cover" 
       />
 
-      <div className="absolute inset-0 bg-linear-to-l from-[#344920]/90 to-[#161a10] " />
+      <div className="absolute inset-0 bg-linear-to-r from-primary to-primary/80 " />
 
       <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 md:grid-cols-2 gap-4">
         <div data-aos="fade-up">
@@ -29,11 +29,11 @@ export default function CallToAction() {
               type="email"
               placeholder="Ingresa tu email"
               required
-              className="bg-white h-12 px-4 py-0 outline-none text-lg w-full flex-1 text-gray-600"
+              className="bg-white h-12 px-4 py-0 outline-none text-lg w-full flex-1 text-gray-600 rounded-l-full"
             />
             <button
               type="submit"
-              className="bg-secondary text-white h-12 px-6 py-0 uppercase font-semibold hover:bg-secondary/80 transition cursor-pointer"
+              className="bg-primary text-white h-12 px-6 py-0 uppercase font-semibold  transition cursor-pointer rounded-r-full"
             >
               Suscríbete
             </button>
