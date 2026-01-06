@@ -63,7 +63,7 @@ export default function NavBar() {
               <span
                 className="
                   absolute inset-0 
-                  bg-secondary
+                  bg-white
                   translate-y-full
                   group-hover:translate-y-0
                   transition-transform duration-500 ease-in-out pointer-events-none

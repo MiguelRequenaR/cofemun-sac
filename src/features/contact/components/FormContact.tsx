@@ -8,12 +8,13 @@ export default function FormContact() {
     company: '',
     email: '',
     phone: '',
+    service: '',
     message: ''
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -29,6 +30,7 @@ export default function FormContact() {
       company: formData.company || 'No especificada',
       email: formData.email,
       phone: formData.phone,
+      service: formData.service || 'No especificado',
       message: formData.message
     });
 
@@ -43,6 +45,7 @@ export default function FormContact() {
         company: '',
         email: '',
         phone: '',
+        service: '',
         message: ''
       });
       setIsSubmitted(false);
@@ -113,6 +116,36 @@ export default function FormContact() {
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
             placeholder="+51 987 654 321"
           />
+        </div>
+
+        <div>
+          <label className="block text-gray-700 font-semibold mb-2">
+            Servicio Solicitado <span className="text-red-500">*</span>
+          </label>
+          <select
+            id="service"
+            name="service"
+            value={formData.service}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white"
+          >
+            <option value="">Seleccione un servicio</option>
+            <option value="Gasfitería">Gasfitería</option>
+            <option value="Electricidad">Electricidad</option>
+            <option value="Pintado">Pintado</option>
+            <option value="Albañilería">Albañilería</option>
+            <option value="Mantenimiento General">Mantenimiento General</option>
+            <option value="Materiales de Ferretería">Materiales de Ferretería</option>
+            <option value="Herramientas Eléctricas y Manuales">Herramientas Eléctricas y Manuales</option>
+            <option value="Válvulas y Conexiones">Válvulas y Conexiones</option>
+            <option value="EPP y Seguridad Industrial">EPP y Seguridad Industrial</option>
+            <option value="Electricidad e Iluminación">Electricidad e Iluminación</option>
+            <option value="Pinturas y Acabados">Pinturas y Acabados</option>
+            <option value="Insumos de Limpieza">Insumos de Limpieza</option>
+            <option value="Importaciones">Importaciones</option>
+            <option value="Otros">Otros</option>
+          </select>
         </div>
 
         <div>

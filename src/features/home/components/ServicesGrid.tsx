@@ -38,7 +38,7 @@ export default function ServicesGrid() {
       <div
       className="max-w-7xl mx-auto">
         <h3
-        className="text-2xl md:text-3xl uppercase mb-4 text-center" data-aos="fade-up">
+        className="text-2xl md:text-3xl uppercase mb-4 text-center mx-4 md:mx-0" data-aos="fade-up">
           Soluciones Integrales para <br /> <span className="font-bold">Tu Empresa y Proyectos</span>
         </h3>
         <hr className="mb-4 w-30 mx-auto border-2" data-aos="fade-up" />

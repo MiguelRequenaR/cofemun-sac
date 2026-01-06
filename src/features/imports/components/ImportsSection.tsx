@@ -6,7 +6,7 @@ export default function ImportsSection() {
       <div
         className="max-w-7xl mx-auto">
         <div
-          className="grid grid-cols-1 md:grid-cols-2 gap-10 space-y-20">
+          className="grid grid-cols-1 md:grid-cols-2 gap-10 md:space-y-20">
           <div data-aos="zoom-in">
             <img src="https://images.unsplash.com/photo-1601897690942-bcacbad33e55?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Importaciones" className="w-full h-full object-cover" />
           </div>

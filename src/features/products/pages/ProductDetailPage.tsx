@@ -47,7 +47,7 @@ export default function ProductDetailPage() {
             </div>
             
             <h1 
-              className="text-white text-5xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-2xl" 
+              className="text-white text-4xl md:text-[60px] font-bold mb-6 leading-tight drop-shadow-2xl" 
               data-aos="fade-up" 
               data-aos-delay="100"
             >
@@ -55,7 +55,7 @@ export default function ProductDetailPage() {
             </h1>
             
             <p 
-              className="text-white/95 text-xl mb-8 leading-relaxed drop-shadow-lg" 
+              className="text-white/95 text-base md:text-lg mb-8 leading-relaxed drop-shadow-lg" 
               data-aos="fade-up" 
               data-aos-delay="200"
             >
@@ -63,7 +63,7 @@ export default function ProductDetailPage() {
             </p>
 
             <div 
-              className="flex flex-wrap gap-4" 
+              className="flex flex-wrap gap-4 justify-center md:justify-start" 
               data-aos="fade-up" 
               data-aos-delay="300"
             >
@@ -87,7 +87,7 @@ export default function ProductDetailPage() {
       </section>
 
       {product.relatedProducts.length > 0 && (
-        <section className="max-w-7xl mx-auto px-4 -mt-16 relative z-20" data-aos="fade-up">
+        <section className="max-w-7xl mx-auto px-4 mt-10 md:-mt-16 relative z-20" data-aos="fade-up">
           <div className="bg-white rounded-2xl shadow-2xl p-6">
             <div className="flex items-center gap-2 mb-4">
               <Package className="w-5 h-5 text-primary" />
@@ -116,7 +116,7 @@ export default function ProductDetailPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" data-aos="fade-up">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up">
           {product.relatedProducts.map((relatedProduct, index) => (
             <div
               key={relatedProduct.id}
@@ -174,7 +174,7 @@ export default function ProductDetailPage() {
                 to="/contacto"
                 className="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-full font-bold border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white transition-all duration-500 ease-in-out uppercase"
               >
-                Solicitar Cotización
+                Cotizar Ahora
                 <ArrowLeft className="w-5 h-5 rotate-180" />
               </Link>
               <Link

@@ -19,7 +19,7 @@ export const productsData: Product[] = [
     title: "Materiales de Ferretería",
     slug: "materiales-ferreteria",
     image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bricocee.com%2Fimages%2Fbricocee%2Fferreteria-materiales-construccion-cee.jpg&f=1&nofb=1&ipt=0c7234ddf57e6a6eb244ceb1facf5800c9c97dfbaf1106263a7d7de36f9e08da",
-    description: "Todo lo que necesitas en materiales de ferretería para obras, industria y hogar: fijaciones, insumos, adhesivos y más. Productos de calidad respaldados por las mejores marcas para todos tus proyectos.",
+    description: "Materiales de ferretería para obras, industria y hogar.",
     relatedProducts: [
       {
         id: 1,

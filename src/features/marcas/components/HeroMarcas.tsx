@@ -11,7 +11,7 @@ export default function HeroAbout() {
           Marcas con las que <br /> trabajamos
         </h1>
         <div className="w-full bg-primary/90" data-aos="fade-up" data-aos-delay="100">
-          <p className="max-w-7xl mx-auto py-10 text-center text-white text-base md:text-lg">
+          <p className="max-w-7xl mx-auto py-10 text-center text-white text-base md:text-lg px-4 md:px-0">
             Contamos con una amplia gama de marcas que nos permiten ofrecerle los mejores productos y servicios para su empresa.
           </p>
         </div>

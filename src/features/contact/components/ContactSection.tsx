@@ -13,20 +13,20 @@ export default function ContactSection() {
             <hr className="w-30 border-2 border-primary mb-4" />
           </div>
           <div className="flex items-center gap-3">
-            <Mail className="w-6 h-6 text-secondary" />
+            <Mail className="w-6 h-6 text-primary" />
             <p className="text-gray-600 text-lg">info@cofemun.com</p>
           </div>
           <div className="flex items-center gap-3">
-            <Phone className="w-6 h-6 text-secondary" />
+            <Phone className="w-6 h-6 text-primary" />
             <p className="text-gray-600 text-lg">+51 987 654 321</p>
           </div>
           <div className="flex items-center gap-3">
-            <MapPin className="w-6 h-6 text-secondary" />
+            <MapPin className="w-6 h-6 text-primary" />
             <p className="text-gray-600 text-lg">Av. de la Providencia 123, Santiago, Chile</p>
           </div>
           <div>
             <h3 className="text-gray-600 text-lg mb-2">También puedes seguirnos en:</h3>
-            <div className="flex items-center gap-8 text-secondary">
+            <div className="flex items-center gap-8 text-primary">
               <Facebook className="w-6 h-6 cursor-pointer" />
               <Instagram className="w-6 h-6 cursor-pointer" />
               <Linkedin className="w-6 h-6 cursor-pointer" />

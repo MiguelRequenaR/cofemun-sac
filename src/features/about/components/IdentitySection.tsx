@@ -67,7 +67,7 @@ export default function IdentitySection() {
         </div>
       </div>
       <div
-      className="py-5 md:py-20 mx-4 md:mx-0">
+      className="py-10 md:py-20 mx-4 md:mx-0">
         <h3 className="uppercase text-blue-500 text-3xl md:text-5xl font-bold mb-4 text-center md:text-left" data-aos="fade-up">
           Nuestros <br /><span className="text-primary">Valores</span>
         </h3>

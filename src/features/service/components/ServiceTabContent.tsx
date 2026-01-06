@@ -37,7 +37,7 @@ export default function ServiceTabContent() {
   return (
     <div className="max-w-7xl mx-auto py-20 px-4">
       {/* Sección de Soluciones de Abastecimiento */}
-      <div className="bg-gray-50 rounded-lg p-8 md:p-12 mb-16" data-aos="fade-up">
+      <div className="bg-gray-50 rounded-lg p-5 md:p-12 mb-16" data-aos="fade-up">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="order-2 md:order-1">
             <img 
@@ -98,7 +98,7 @@ export default function ServiceTabContent() {
       </div>
 
       {/* Sección de Unidades de Negocio */}
-      <div className="bg-primary text-white rounded-lg p-8 md:p-12" data-aos="fade-up">
+      <div className="bg-primary text-white rounded-lg p-5 md:p-12" data-aos="fade-up">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold uppercase mb-4">
             Unidades de <span className="text-blue-500">Negocio</span>

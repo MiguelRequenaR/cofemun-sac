@@ -12,7 +12,7 @@ export default function HeroAbout() {
         </h1>
         <div className="w-full bg-primary/90" data-aos="fade-up" data-aos-delay="100">
           <p className="max-w-7xl mx-auto py-10 text-center text-white text-base md:text-lg">
-            COFEMUN S.A.C. es una empresa peruana especializada en el abastecimiento integral de suministros industriales, ferretería técnica y sistemas de fluidos. Desde el 2016, nos hemos consolidado como un socio estratégico para el sector público y privado, brindando no solo productos certificados, sino soluciones logísticas eficientes que garantizan la continuidad operativa de cada proyecto.
+            COFEMUN S.A.C. es una empresa peruana especializada en el abastecimiento integral de suministros industriales, ferretería técnica y sistemas de fluidos. Desde el 2016, nos hemos consolidado como un socio estratégico para el sector público y privado.
           </p>
         </div>
       </div>

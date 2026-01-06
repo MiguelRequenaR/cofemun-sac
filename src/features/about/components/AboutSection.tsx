@@ -17,7 +17,7 @@ export default function AboutSection() {
               Además, complementamos nuestra oferta con servicios generales y logística propia, lo que nos permite brindar soluciones "llave en mano": desde la venta hasta su entrega en obra y el mantenimiento posterior de las instalaciones. Nuestro enfoque es reducir la carga administrativa de nuestros clientes unificando proveedores.
             </p>
           </div>
-          <div data-aos="fade-up" data-aos-delay="100">
+          <div data-aos="fade-up" data-aos-delay="100" className="mx-4 md:mx-0">
             <img src="https://images.unsplash.com/photo-1579847188804-ecba0e2ea330?q=80&w=748&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="About Section" className="rounded-2xl" />
           </div>
         </div>

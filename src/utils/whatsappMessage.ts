@@ -3,6 +3,7 @@ interface WhatsAppMessage {
   company: string;
   email: string;
   phone: string;
+  service: string;
   message: string;
 }
 
@@ -14,6 +15,7 @@ export function whatsappMessage(data: WhatsAppMessage) {
     Empresa: ${data.company}
     Email: ${data.email}
     Teléfono: ${data.phone}
+    Servicio Solicitado: ${data.service}
     Mensaje: ${data.message}
   `;
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;

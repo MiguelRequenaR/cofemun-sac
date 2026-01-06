@@ -6,34 +6,37 @@ const carouselImages = [
     id: 1,
     image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffloorcenter.cl%2Fwp-content%2Fuploads%2Fsurtido-de-herramientas-en-ferreteria-moderna.jpg&f=1&nofb=1&ipt=1fe50128a80ac58c1aab5af303963d7241ce789a8948cc35c7a86b4182232ea2",
     title: "Materiales de Ferretería,\n Válvulas y Conexiones",
-    description: "Distribución mayorista de materiales de ferretería, suministros integrales de tuberías, \nválvulas y conexiones de alta presión. Garantizamos el stock y la variedad necesaria \n para la continuidad de tus operaciones.",
+    description: "Distribución mayorista de materiales de ferretería, suministros integrales de tuberías, \nválvulas y conexiones de alta presión.",
     buttonLink: "/productos",
   },
   {
     id: 2,
     image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Abastecimiento Industrial\n y Metal Mecánico",
-    description: "Equipamiento especializado, abrasivo y herramientas de corte para el sector industrial. \n Precios competitivos y facturación formal para optimizar tus costos.",
+    description: "Equipamiento especializado, abrasivo y herramientas de corte para el sector industrial.",
     buttonLink: "/servicios",
   },
   {
     id: 3,
     image: "https://images.unsplash.com/photo-1559297434-fae8a1916a79?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Logística y Transporte\n de Materiales",
-    description: "Gestión logística eficiente adaptada a tu proyecto. Aseguramos que tus materiales \n lleguen seguros y a tiempo, directamente a tu obra.",
+    description: "Gestión logística eficiente adaptada a tu proyecto. Aseguramos que tus materiales \n lleguen seguros y a tiempo.",
     buttonLink: "/servicios",
   },
   {
     id: 4,
     image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Atención a Proyectos y \nLicitaciones",
-    description: "Atención corporativa personalizada para grandes volúmenes. Experiencia y solidez \n desde el 2016 atendiendo requerimientos del sector público y privado con total garantía.",
+    description: "Atención corporativa personalizada para grandes volúmenes. Experiencia y solidez \n desde el 2016 atendiendo requerimientos.",
     buttonLink: "/servicios",
   },
 ]
 
-export default function HeroHome() {
+function removeNewlines(str: string) {
+  return str.replace(/\n/g, " ")
+}
 
+export default function HeroHome() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -81,11 +84,13 @@ export default function HeroHome() {
 
             <div className="relative z-10 flex justify-center w-full h-full" data-aos="fade-up">
               <div className="flex flex-col max-w-7xl w-full px-4 md:px-0 justify-center">
-                <h1 className="text-white text-3xl md:text-[60px] font-bold mb-4 drop-shadow-lg uppercase whitespace-pre-line">
-                  {slide.title}
+                <h1 className="text-white text-3xl md:text-[60px] font-bold mb-4 drop-shadow-lg uppercase">
+                  <span className="block md:hidden">{removeNewlines(slide.title)}</span>
+                  <span className="hidden md:inline whitespace-pre-line">{slide.title}</span>
                 </h1>
-                <p className="text-white text-lg md:text-xl mb-6 drop-shadow whitespace-pre-line">
-                  {slide.description}
+                <p className="text-white text-lg md:text-xl mb-6 drop-shadow">
+                  <span className="block md:hidden">{removeNewlines(slide.description)}</span>
+                  <span className="hidden md:inline whitespace-pre-line">{slide.description}</span>
                 </p>
                 <a
                   href={slide.buttonLink}
