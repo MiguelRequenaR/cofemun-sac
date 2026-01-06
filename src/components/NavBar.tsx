@@ -21,6 +21,10 @@ export default function NavBar() {
     {
       label: "Productos",
       link: "/productos"
+    },
+    {
+      label: "Marcas",
+      link: "/marcas",
     }
   ];
 
