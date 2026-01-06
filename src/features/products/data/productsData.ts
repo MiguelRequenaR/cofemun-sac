@@ -19,38 +19,13 @@ export const productsData: Product[] = [
     title: "Materiales de Ferretería",
     slug: "materiales-ferreteria",
     image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bricocee.com%2Fimages%2Fbricocee%2Fferreteria-materiales-construccion-cee.jpg&f=1&nofb=1&ipt=0c7234ddf57e6a6eb244ceb1facf5800c9c97dfbaf1106263a7d7de36f9e08da",
-    description: "Materiales de construcción de alta calidad para todo tipo de proyectos. Contamos con una amplia gama de productos que cumplen con los más altos estándares de calidad y normativas peruanas.",
+    description: "Todo lo que necesitas en materiales de ferretería para obras, industria y hogar: fijaciones, insumos, adhesivos y más. Productos de calidad respaldados por las mejores marcas para todos tus proyectos.",
     relatedProducts: [
       {
         id: 1,
-        name: "Cemento",
-        image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fconcretosguadalajara.com%2Fwp-content%2Fuploads%2F2024%2F03%2FSaco-de-cemento-Portland-en-obra-de-construccion.jpg&f=1&nofb=1&ipt=36191ef450059534722e372a3a881b858ae93fed3a645c76c4abf885a8ba8815"
+        name: "Electrodo Soldadura 6011 (Punto Azul)",
+        image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdnx.jumpseller.com%2Fbarracaolave%2Fimage%2F58230364%2Fresize%2F700%2F700%3F1733946011&f=1&nofb=1&ipt=3937322536cc285828fa42b2fc23023efba7ab593d09e19b9ef938265468c4f7"
       },
-      {
-        id: 2,
-        name: "Ladrillos",
-        image: "https://images.unsplash.com/photo-1629608444154-6d052691632f?q=80&w=739&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      },
-      {
-        id: 3,
-        name: "Arena",
-        image: "https://images.unsplash.com/photo-1681880511033-b9582a379ce2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      },
-      {
-        id: 4,
-        name: "Piedra",
-        image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.freepik.com%2Ffoto-gratis%2Fpiedra-materiales-construccion-piedra-triturada_44527-571.jpg&f=1&nofb=1&ipt=ece296f73c984e1d2327438c32b74974c424d787922b690c9dfa98d60a2811f1"
-      },
-      {
-        id: 5,
-        name: "Hierro",
-        image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lifeder.com%2Fwp-content%2Fuploads%2F2018%2F05%2Fmateriales-ferrosos-foto-min-1024x768.jpg&f=1&nofb=1&ipt=5ade168327b093a69c4b747cc30a3fb11eedae7c4de5e26790d1c8af3cde6bd1"
-      },
-      {
-        id: 6,
-        name: "Tubos PVC",
-        image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpoceria-madrid.es%2Fwp-content%2Fuploads%2F2022%2F09%2FTipos-de-tuberia-de-plastico-y-sus-caracteristicas.jpg&f=1&nofb=1&ipt=6be62d36a012f149deb659e9c66616af556c46955fe2fe526f9e9fd92b82edc2"
-      }
     ]
   },
   {
