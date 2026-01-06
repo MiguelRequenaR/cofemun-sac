@@ -1,145 +1,150 @@
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ShoppingCart, Shield, Hammer, Wrench } from "lucide-react";
+import { Link } from "react-router-dom";
 
-type TabKey = 'compra' | 'negocios';
-
-interface ServiceTabContentProps {
-  activeTab: TabKey;
-}
-
-interface DropdownSection {
+interface Division {
   id: string;
   title: string;
   content: string;
+  icon: typeof ShoppingCart;
 }
 
-const dropdowns: DropdownSection[] = [
+const divisions: Division[] = [
   {
-    id: "construccion",
-    title: "División de Construcción y Ferretería",
+    id: "ferreteria",
+    title: "División de Ferretería y Herramientas",
     content:
-      "Suministro integral de materiales para obra gruesa y acabados: Cemento, fierros, agregados, ladrillos y herramientas eléctricas de alto rendimiento para el constructor."
+      "Suministro de equipamiento profesional y consumibles operativos. Contamos con herramientas eléctricas, manuales, abrasivos y elementos de fijación (pernería) de alta resistencia.",
+    icon:Hammer
   },
   {
-    id: "servicios",
-    title: "División de Fontanería y Calefacción",
+    id: "fluidos",
+    title: "División de Valvulas y Conexiones",
     content:
-      "Especialistas en sistemas de conducción de fluidos. Distribuimos tuberías PVC/CPVC/Fierro, válvulas industriales, grifería y accesorios para redes de agua y desagüe."
+      "Soluciones especializadas para conducción de fluidos. Amplio stock en válvulas industriales, tuberías (PVC, CPVC, SCH40) y conexiones para saneamiento y procesos industriales.",
+    icon:Wrench
   },
   {
     id: "seguridad",
     title: "División de Seguridad Industrial (EPP)",
     content:
-      "Equipamiento de protección personal para riesgos laborales. Abastecemos cascos, lentes, guantes, calzado de seguridad y ropa de trabajo con certificación técnica."
+      "Protección integral para tu equipo de trabajo. Abastecemos cascos, respiradores, guantes, calzado de seguridad y ropa industrial certificada bajo normativa técnica vigente.",
+    icon: Shield
   },
 ];
 
-export default function ServiceTabContent({ activeTab }: ServiceTabContentProps) {
-  const [open, setOpen] = useState<string | null>(null);
-
-  const handleToggle = (id: string) => {
-    setOpen((prev) => (prev === id ? null : id));
-  };
+export default function ServiceTabContent() {
 
   return (
-    <div className="max-w-7xl mx-auto py-10">
-      {activeTab === "compra" &&
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div>
-              <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Servicios de Compra" className="w-full h-full object-cover" data-aos="zoom-in" />
-            </div>
-            <div className="space-y-3 mx-4 md:mx-0" data-aos="fade-up">
-              <h2 className="text-3xl md:text-4xl font-bold uppercase text-gray-600">
-                Soluciones de <br /> <span className="text-primary">Abastecimiento</span>
-              </h2>
-              <hr className="w-30 border-2 border-primary mb-4" />
-              <h3 className="text-2xl font-bold uppercase text-primary">
-                Venta Mayorista Integral
-              </h3>
-              <p className="text-gray-600">
-                Centralizamos tus requerimientos. En lugar de lidiar con 10 proveedores distintos para cemento, fierros, limpieza y acabados, nosotros consolidamos todo en una sola orden de compra y una sola factura, simplificando tu gestión administrativa.
-              </p>
-              <h3 className="text-2xl font-bold uppercase text-primary">
-                Stock y Diponibilidad
-              </h3>
-              <p className="text-gray-600">
-                Garantizamos la continuidad de tus operaciones. Mantenemos un inventario rotativo de los productos de mayor demanda para asegurar que tengas los insumos cuando los necesitas, evitando paradas en obra.
-              </p>
-              <h3 className="text-2xl font-bold uppercase text-primary">
-                Acuerdos Corporativos B2B
-              </h3>
-              <p className="text-gray-600">
-                Adaptamos nuestra propuesta comercial a tu empresa. Ofrecemos líneas de crédito, homologación de proveedores y atención preferencial para áreas de compras y logística.
-              </p>
-              <a href="/contacto"
-                className="relative inline-block overflow-hidden bg-primary text-white px-5 py-2 uppercase cursor-pointer border border-primary group transition-colors duration-500 hover:text-gray-600"
-              >
-                <span
-                  className="absolute inset-0 bg-secondary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out pointer-events-none block"
-                />
-                <span className="relative z-10 transition-colors duration-500">
-                  Contactanos
-                </span>
-              </a>
-            </div>
+    <div className="max-w-7xl mx-auto py-20 px-4">
+      {/* Sección de Soluciones de Abastecimiento */}
+      <div className="bg-gray-50 rounded-lg p-8 md:p-12 mb-16" data-aos="fade-up">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="order-2 md:order-1">
+            <img 
+              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1470&auto=format&fit=crop" 
+              alt="Soluciones de Abastecimiento" 
+              className="w-full h-[400px] object-cover rounded-lg shadow-lg" 
+              data-aos="zoom-in" 
+            />
           </div>
-        </div>
-      }
-      {activeTab === "negocios" &&
-        <div className="max-w-7xl mx-auto" data-aos="fade-up">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div className="mx-4 md:mx-0">
-              <h2 className="text-3xl md:text-4xl font-bold uppercase text-gray-600">
-                Unidades de <br /> <span className="text-primary">Negocio</span>
-              </h2>
-              <hr className="w-30 border-2 border-primary mb-4" />
-              <div className="mt-5">
-                {dropdowns.map((section) => (
-                  <div key={section.id} className="mb-3">
-                    <button
-                      onClick={() => handleToggle(section.id)}
-                      className={`
-                        w-full text-left py-4 rounded-md
-                        text-primary font-semibold transition-colors duration-200 flex items-center justify-between
-                        focus:outline-none cursor-pointer
-                        `}
-                    >
-                      <span className="text-2xl">{section.title}</span>
-                      <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-300 ${open === section.id ? "rotate-180" : "rotate-0"}`} />
-                    </button>
-                    <div
-                      className={`
-                        transition-all duration-500 overflow-hidden bg-white px-4
-                        ${open === section.id ? "max-h-40 opacity-100 py-3" : "max-h-0 opacity-0 py-0"}
-                        border-b border-primary/20
-                      `}
-                      style={{
-                        transitionProperty: "max-height, opacity, padding",
-                      }}
-                    >
-                      <p className="text-gray-600 text-base">{section.content}</p>
-                    </div>
-                  </div>
-                ))}
-                <a href="/contacto"
-                  className="relative inline-block overflow-hidden bg-primary text-white px-5 py-2 uppercase cursor-pointer border border-primary group transition-colors duration-500 hover:text-gray-600 mt-10"
-                >
-                  <span
-                    className="absolute inset-0 bg-secondary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out pointer-events-none block"
-                  />
-                  <span className="relative z-10 transition-colors duration-500">
-                    Contactanos
-                  </span>
-                </a>
+          <div className="space-y-5 order-1 md:order-2" data-aos="fade-up">
+            <h2 className="text-3xl md:text-4xl font-bold uppercase text-blue-500">
+              Soluciones de <br /> <span className="text-primary">Abastecimiento</span>
+            </h2>
+            <hr className="w-30 border-2 border-primary mb-4" />
+            
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-xl font-bold uppercase text-primary mb-2">
+                  Venta Mayorista Integral
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Centralizamos tus requerimientos. En lugar de lidiar con 10 proveedores distintos para cemento, fierros, limpieza y acabados, nosotros consolidamos todo en una sola orden de compra y una sola factura, simplificando tu gestión administrativa.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold uppercase text-primary mb-2">
+                  Stock y Disponibilidad
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Garantizamos la continuidad de tus operaciones. Mantenemos un inventario rotativo de los productos de mayor demanda para asegurar que tengas los insumos cuando los necesitas, evitando paradas en obra.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold uppercase text-primary mb-2">
+                  Acuerdos Corporativos B2B
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Adaptamos nuestra propuesta comercial a tu empresa. Ofrecemos líneas de crédito, homologación de proveedores y atención preferencial para áreas de compras y logística.
+                </p>
               </div>
             </div>
-            <div>
-              <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Desarrollo de Negocios" className="w-full h-[600px] object-cover" data-aos="zoom-in" />
-            </div>
+
+            <Link 
+              to="/contacto"
+              className="relative inline-block overflow-hidden bg-primary text-white px-6 py-3 uppercase cursor-pointer border border-primary group transition-colors duration-500 hover:text-gray-600 mt-4 rounded-full"
+            >
+              <span
+                className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out pointer-events-none block"
+              />
+              <span className="relative z-10 transition-colors duration-500">
+                Contáctanos
+              </span>
+            </Link>
           </div>
         </div>
-      }
+      </div>
+
+      {/* Sección de Unidades de Negocio */}
+      <div className="bg-primary text-white rounded-lg p-8 md:p-12" data-aos="fade-up">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold uppercase mb-4">
+            Unidades de <span className="text-blue-500">Negocio</span>
+          </h2>
+          <hr className="w-30 border-2 border-secondary mb-4 mx-auto" />
+          <p className="text-lg max-w-3xl mx-auto">
+            Especializados en tres divisiones estratégicas para cubrir todas tus necesidades de suministro.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+          {divisions.map((division) => {
+            const Icon = division.icon;
+            return (
+              <div 
+                key={division.id} 
+                className="bg-white text-gray-600 rounded-lg p-6 hover:scale-105 transition-all duration-500 cursor-pointer"
+              >
+                <div className="bg-primary rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+                  <Icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-primary mb-3 text-center">
+                  {division.title}
+                </h3>
+                <p className="text-gray-600 text-base leading-relaxed text-center">
+                  {division.content}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="text-center mt-10">
+          <a 
+            href="/productos"
+            className="relative inline-block overflow-hidden bg-white text-primary px-6 py-3 uppercase cursor-pointer border border-secondary group transition-colors duration-500 hover:text-white rounded-full"
+          >
+            <span
+              className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out pointer-events-none block"
+            />
+            <span className="relative z-10 transition-colors duration-500">
+              Ver Productos
+            </span>
+          </a>
+        </div>
+      </div>
     </div>
   )
 }

@@ -12,7 +12,7 @@ export default function HeroAbout() {
         </h1>
         <div className="w-full bg-primary/90" data-aos="fade-up" data-aos-delay="100">
           <p className="max-w-7xl mx-auto py-10 text-center text-white text-base md:text-lg">
-            Contamos con un equipo con amplia experiencia en la cadena de suministro local, especializado en abastecer proyectos en Lima y Provincias. Nuestra flexibilidad nos permite adaptar nuestra logística a los tiempos y condiciones de tu obra.
+            Contamos con un equipo especialista, enfocado en la atención corporativa para Lima y Provincias. Nuestra flexibilidad operativa nos permite adaptar los cronogramas de entrega a las condiciones reales y tiempos críticos de tu proyecto, evitando paradas de planta o retrasos en obra.
           </p>
         </div>
       </div>
