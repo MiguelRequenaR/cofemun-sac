@@ -79,7 +79,7 @@ export default function InfoHome() {
                   <div className="bg-white rounded-full p-2">
                     <Icon className="w-10 h-10 text-primary" />
                   </div>
-                  <h3 className="text-primary text-2xl font-bold uppercase">
+                  <h3 className="text-primary text-lg md:text-2xl font-bold uppercase">
                     {item.title}
                   </h3>
                 </div>

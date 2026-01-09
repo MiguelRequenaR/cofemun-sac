@@ -6,7 +6,7 @@ const carouselImages = [
     id: 1,
     image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffloorcenter.cl%2Fwp-content%2Fuploads%2Fsurtido-de-herramientas-en-ferreteria-moderna.jpg&f=1&nofb=1&ipt=1fe50128a80ac58c1aab5af303963d7241ce789a8948cc35c7a86b4182232ea2",
     title: "Materiales de Ferretería,\n Válvulas y Conexiones",
-    description: "Distribución mayorista de materiales de ferretería, suministros integrales de tuberías, \nválvulas y conexiones de alta presión.",
+    description: "Distribución mayorista de materiales de ferretería, tuberías, \nválvulas y conexiones de alta presión.",
     buttonLink: "/productos",
   },
   {
