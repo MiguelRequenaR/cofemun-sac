@@ -12,7 +12,7 @@ export default function HeroProducts() {
         </h1>
         <div className="w-full bg-primary/90" data-aos="fade-up" data-aos-delay="100">
           <p className="max-w-7xl mx-auto py-10 text-center text-white text-base md:text-lg">
-            Integramos las mejores marcas del mercado para garantizar la durabilidad de tu obra. Desde la cimentación hasta los acabados finales, nuestro inventario cumple con las normas técnicas y los estándares de seguridad.
+            Integramos las mejores marcas del mercado para garantizar la calidad de nuestros productos.
           </p>
         </div>
       </div>

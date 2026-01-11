@@ -1,48 +1,20 @@
-import { Wrench, Zap, PaintBucket, Hammer, Settings, Package } from "lucide-react"
+import { Package, Truck } from "lucide-react"
 import { Link } from "react-router-dom";
 
 const services = [
   {
     id: 1,
-    title: "Gasfitería",
-    description: "Instalación, reparación y mantenimiento de sistemas de agua y desagüe. Soluciones profesionales para tuberías, grifería y sistemas sanitarios.",
-    icon: Wrench,
-    image: "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?q=80&w=1470&auto=format&fit=crop",
+    title: "Suministro de Materiales Industriales",
+    description: "Proveemos todos los materiales necesarios para tus operaciones industriales. Ferretería industrial, herramientas, EPP y más, todo en un solo proveedor.",
+    icon: Package,
+    image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=1172&auto=format&fit=crop",
   },
   {
     id: 2,
-    title: "Electricidad",
-    description: "Servicios eléctricos completos: instalaciones, mantenimiento preventivo, corrección de fallas y certificaciones. Garantizamos seguridad y eficiencia.",
-    icon: Zap,
-    image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=1469&auto=format&fit=crop",
-  },
-  {
-    id: 3,
-    title: "Pintado",
-    description: "Acabados profesionales para interiores y exteriores. Preparación de superficies, aplicación técnica y acabados de alta calidad.",
-    icon: PaintBucket,
-    image: "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpinturasllorca.es%2Fwp-content%2Fuploads%2F2017%2F06%2FPintura-Industrial-5.jpg&f=1&nofb=1&ipt=d03962d07aee92e93c13f1477309aa280e0eead4d3a7e3e8aa522e1d6ac81255",
-  },
-  {
-    id: 4,
-    title: "Albañilería",
-    description: "Construcción y reparación de estructuras. Levantamiento de muros, pisos, enchapes y todo tipo de trabajos en concreto y mampostería.",
-    icon: Hammer,
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1476&auto=format&fit=crop",
-  },
-  {
-    id: 5,
-    title: "Mantenimiento General",
-    description: "Servicio integral de mantenimiento preventivo y correctivo para instalaciones comerciales e industriales. Soluciones rápidas y efectivas.",
-    icon: Settings,
-    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.ainoxsas.com%2Fwp-content%2Fuploads%2F2022%2F02%2F5-tipos-de-mantenimiento-que-debes-conocer1.png&f=1&nofb=1&ipt=a5ee3c237883a7efb5947624bc3e9a0c5bb35e8c40ce2c9d999a281830983b49",
-  },
-  {
-    id: 6,
-    title: "Suministro de Materiales",
-    description: "Proveemos todos los materiales necesarios para tus proyectos. Ferretería, acabados, herramientas y más, todo en un solo lugar.",
-    icon: Package,
-    image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=1172&auto=format&fit=crop",
+    title: "Logística y Transporte Industrial",
+    description: "Servicio de distribución integrado a tu compra. Coordinamos la entrega de tus materiales directamente en tu planta, campamento minero o centro de operaciones con protocolos de seguridad.",
+    icon: Truck,
+    image: "https://images.unsplash.com/photo-1559297434-fae8a1916a79?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ]
 
@@ -54,7 +26,7 @@ export default function ServicesGeneralesGrid() {
           className="text-3xl md:text-4xl uppercase mb-4 text-center text-blue-500" 
           data-aos="fade-up"
         >
-          Servicios <span className="font-bold text-primary">Generales</span>
+          Servicios <span className="font-bold text-primary">Industriales</span>
         </h2>
         <hr className="mb-4 w-30 mx-auto border-2 border-primary" data-aos="fade-up" />
         <p
@@ -62,8 +34,7 @@ export default function ServicesGeneralesGrid() {
           data-aos="fade-up" 
           data-aos-delay="100"
         >
-          Ofrecemos soluciones integrales de mantenimiento y servicios especializados 
-          para empresas, industrias y proyectos de construcción.
+          Ofrecemos soluciones integrales de abastecimiento y logística especializada para empresas mineras, metal mecánica e industria en general.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
@@ -72,7 +43,7 @@ export default function ServicesGeneralesGrid() {
             return (
               <div
                 key={service.id}
-                className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-white"
+                className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-white cursor-pointer"
                 data-aos="fade-up" 
                 data-aos-delay={index * 100}
               >

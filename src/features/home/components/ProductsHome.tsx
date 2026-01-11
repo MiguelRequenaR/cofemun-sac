@@ -92,7 +92,7 @@ export default function ProductsHome() {
           </h3>
           <hr className="mb-4 w-30 border-2 text-primary mx-auto md:mx-0" />
           <p className="text-primary text-lg mb-10">
-            Contamos con una amplia variedad de suministros industriales a tu disposición.
+            Contamos con una amplia variedad de suministros industriales para mineria, metal mecánica e industrial en general.
           </p>
           <a
             href="/lineas"
@@ -126,7 +126,7 @@ export default function ProductsHome() {
                   className="w-full h-[450px] object-cover rounded group-hover/card:opacity-80 transition duration-300"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/50 group-hover/card:bg-primary/80 transition duration-500">
-                  <h4 className="text-white text-3xl font-semibold drop-shadow text-center uppercase">
+                  <h4 className="text-white text-2xl font-semibold drop-shadow text-center uppercase">
                     {product.title}
                   </h4>
                 </div>

@@ -18,7 +18,7 @@ export default function ProductsGrid() {
             </h2>
           </div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            Explora nuestra amplia selección de productos profesionales para construcción e industria
+            Explora nuestra amplia selección de productos profesionales para empresas mineras, metal mecánica e industria en general.
           </p>
           <div className="flex justify-center gap-8 flex-wrap">
             <div className="text-center" data-aos="fade-up" data-aos-delay="100">

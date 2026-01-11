@@ -8,12 +8,12 @@ const values = [
   {
     id: 2,
     title: "Flexibilidad",
-    description: "Nos adaptamos a los requerimientos específicos de cada obra o empresa, ofreciendo soluciones a medida.",
+    description: "Nos adaptamos a los requerimientos específicos de cada empresa, ofreciendo soluciones a medida.",
   },
   {
     id: 3,
     title: "Seguridad",
-    description: "Priorizamos la calidad de los materiales y la seguridad en nuestros servicios de limpieza y transporte.",
+    description: "Priorizamos la calidad de los materiales y la seguridad en nuestros servicios.",
   },
   {
     id: 4,
@@ -23,7 +23,7 @@ const values = [
   {
     id: 5,
     title: "Puntualidad",
-    description: "Entendemos que en un proyecto, el tiempo es dinero. Nuestra logística está enfocada en cumplir los cronogramas.",
+    description: "Entendemos que en una operación industrial, el tiempo es dinero. Nuestra logística está enfocada en cumplir los cronogramas.",
   },
   {
     id: 6,
@@ -35,39 +35,39 @@ const values = [
 export default function IdentitySection() {
   return (
     <section
-    className="max-w-7xl mx-auto py-20">
+      className="max-w-7xl mx-auto py-20">
       <div
-      className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-4 md:mx-0">
+        className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-4 md:mx-0">
         <div
-        className="bg-primary text-white p-5 rounded-lg cursor-pointer hover:scale-105 transition-all duration-500">
+          className="bg-primary text-white p-5 rounded-lg cursor-pointer hover:scale-105 transition-all duration-500">
           <h3
-          className="text-3xl text-white font-bold uppercase mb-4 text-center">Misión</h3>
+            className="text-3xl text-white font-bold uppercase mb-4 text-center">Misión</h3>
           <p
-          className="text-white text-lg text-justify">
-            Proveer soluciones integrales de abastecimiento y servicios generales a nuestros clientes, garantizando la calidad de los productos, la puntualidad en la logística y la eficiencia en el mantenimiento de sus instalaciones, contribuyendo al éxito de sus proyectos.
+            className="text-white text-lg text-justify">
+            Proveer soluciones integrales de abastecimiento industrial a nuestros clientes, garantizando la calidad de los productos, la puntualidad en la entrega y la eficiencia en el mantenimiento de sus instalaciones industriales, contribuyendo al éxito de sus operaciones.
           </p>
         </div>
         <div
-        className="bg-primary text-white p-5 rounded-lg cursor-pointer hover:scale-105 transition-all duration-500">
+          className="bg-primary text-white p-5 rounded-lg cursor-pointer hover:scale-105 transition-all duration-500">
           <h3
-          className="text-3xl text-white font-bold uppercase mb-4 text-center">Visión</h3>
+            className="text-3xl text-white font-bold uppercase mb-4 text-center">Visión</h3>
           <p
-          className="text-white text-lg text-justify">
-            Ser reconocidos como el aliado estratégico más confiable en el sector de construcción y mantenimiento industrial en el Perú, destacándonos por nuestra capacidad de respuesta, formalidad y versatilidad operativa.
+            className="text-white text-lg text-justify">
+            Ser reconocidos como el aliado estratégico más confiable en el sector industrial, minero y metal mecánico en el Perú, destacándonos por nuestra capacidad de respuesta, formalidad y versatilidad operativa.
           </p>
         </div>
         <div
-        className="bg-primary text-white p-5 rounded-lg cursor-pointer hover:scale-105 transition-all duration-500">
+          className="bg-primary text-white p-5 rounded-lg cursor-pointer hover:scale-105 transition-all duration-500">
           <h3
-          className="text-3xl text-white font-bold uppercase mb-4 text-center">Filosofía</h3>
+            className="text-3xl text-white font-bold uppercase mb-4 text-center">Filosofía</h3>
           <p
-          className="text-white text-lg text-justify">
+            className="text-white text-lg text-justify">
             Creemos en la simplificación operativa. No solo vendemos productos; vendemos el tiempo que nuestros clientes ahorran al centralizar sus compras y servicios en un solo proveedor formal y eficiente.
           </p>
         </div>
       </div>
       <div
-      className="py-10 md:py-20 mx-4 md:mx-0">
+        className="py-10 md:py-20 mx-4 md:mx-0">
         <h3 className="uppercase text-blue-500 text-3xl md:text-5xl font-bold mb-4 text-center md:text-left" data-aos="fade-up">
           Nuestros <br /><span className="text-primary">Valores</span>
         </h3>

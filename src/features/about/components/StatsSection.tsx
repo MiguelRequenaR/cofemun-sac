@@ -18,7 +18,7 @@ const stats = [
   {
     id: 4,
     title: "3 divisiones",
-    description: "Ferretería, Industria y Servicios"
+    description: "Ferretería, Abastecimiento y Logística"
   },
   {
     id: 5,

@@ -59,7 +59,7 @@ export default function ServiceTabContent() {
                   Venta Mayorista Integral
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Centralizamos tus requerimientos. En lugar de lidiar con 10 proveedores distintos para cemento, fierros, limpieza y acabados, nosotros consolidamos todo en una sola orden de compra y una sola factura, simplificando tu gestión administrativa.
+                  Centralizamos tus requerimientos. En lugar de lidiar con 10 proveedores distintos para materiales industriales, nosotros consolidamos todo en una sola orden de compra y una sola factura, simplificando tu gestión administrativa.
                 </p>
               </div>
 
@@ -68,7 +68,7 @@ export default function ServiceTabContent() {
                   Stock y Disponibilidad
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Garantizamos la continuidad de tus operaciones. Mantenemos un inventario rotativo de los productos de mayor demanda para asegurar que tengas los insumos cuando los necesitas, evitando paradas en obra.
+                  Garantizamos la continuidad de tus operaciones. Mantenemos un inventario rotativo de los productos de mayor demanda para asegurar que tengas los insumos cuando los necesitas, evitando paradas.
                 </p>
               </div>
 

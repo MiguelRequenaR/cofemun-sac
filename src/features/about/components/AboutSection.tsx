@@ -12,13 +12,13 @@ export default function AboutSection() {
               ¿Qué <br /> <span className="font-bold text-primary">Hacemos?</span>
             </h2>
             <p className="text-base md:text-lg text-primary">
-              Centralizamos tus necesidades operativas. Más que un proveedor, somos una extensión de tu equipo de compras. Gestionamos el abastecimiento de insumos críticos para obras civiles e industrias, garantizando siempre el cumplimiento de las normativas técnicas.
+              Centralizamos tus necesidades operativas. Más que un proveedor, somos una extensión de tu equipo de compras. Gestionamos el abastecimiento de insumos críticos para empresas mineras, metal mecánica e industrial en general, garantizando siem.
               <br /> <br />
-              Además, complementamos nuestra oferta con servicios generales y logística propia, lo que nos permite brindar soluciones "llave en mano": desde la venta hasta su entrega en obra y el mantenimiento posterior de las instalaciones. Nuestro enfoque es reducir la carga administrativa de nuestros clientes unificando proveedores.
+              Además, complementamos nuestra oferta con logística propia, lo que nos permite brindar soluciones integrales: desde la venta hasta su entrega. Nuestro enfoque es reducir la carga administrativa de nuestros clientes unificando proveedores.
             </p>
           </div>
           <div data-aos="fade-up" data-aos-delay="100" className="mx-4 md:mx-0">
-            <img src="https://images.unsplash.com/photo-1579847188804-ecba0e2ea330?q=80&w=748&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="About Section" className="rounded-2xl" />
+            <img src="https://images.unsplash.com/photo-1560277090-46659724a489?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="About Section" className="rounded-2xl" />
           </div>
         </div>
       </div>

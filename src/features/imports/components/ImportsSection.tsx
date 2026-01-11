@@ -37,9 +37,9 @@ export default function ImportsSection() {
             </h2>
             <hr className="w-30 border-2 border-primary mb-4" />
             <p className="text-gray-600">
-              Ofrecemos un servicio logístico integral con entregas Door-to-Door, llegando hasta tu almacén central, campamento minero o punto de operación en cualquier lugar del Perú. Garantizamos que tu mercadería llegue en perfectas condiciones, minimizando mermas y evitando retrasos en tu cronograma de ejecución.
+              Ofrecemos un servicio logístico integral con entregas Door-to-Door, llegando hasta tu planta industrial, almacén central, campamento minero o punto de operación en cualquier lugar del Perú. Con protocolos de seguridad para carga pesada y materiales frágiles, minimizando mermas y asegurando que tu mercadería llegue intacta.
               <br /><br />
-              Nuestra flota cumple estrictos protocolos de seguridad para carga pesada y materiales frágiles, minimizando mermas y asegurando que tu mercadería llegue intacta. Con cobertura nacional.
+              Nuestra flota cumple estrictos protocolos de seguridad para carga pesada y materiales industriales, minimizando mermas y asegurando que tu mercadería llegue intacta. Con cobertura nacional para la industria.
             </p>
             <a href="/contacto"
               className="relative inline-block overflow-hidden bg-primary text-white px-5 py-2 uppercase cursor-pointer border border-primary group transition-colors duration-500 hover:text-gray-600 mt-10 rounded-full"
