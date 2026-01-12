@@ -1,4 +1,4 @@
-import { ArrowRight, Package, ShoppingBag } from "lucide-react"
+import { ArrowRight, ShoppingBag } from "lucide-react"
 import { Link } from "react-router-dom"
 import { productsData } from "../data/productsData"
 import { useState } from "react"
@@ -11,27 +11,27 @@ export default function ProductsGrid() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Encabezado con stats */}
         <div className="text-center mb-16" data-aos="fade-up">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Package className="w-8 h-8 text-primary" />
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
+          <div className="flex flex-col items-center justify-center gap-2 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-500 uppercase">
               Nuestro <span className="text-primary">Catálogo</span>
             </h2>
+            <hr className="w-30 border-2 border-primary" />
           </div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-primary max-w-2xl mx-auto mb-8">
             Explora nuestra amplia selección de productos profesionales para empresas mineras, metal mecánica e industria en general.
           </p>
           <div className="flex justify-center gap-8 flex-wrap">
             <div className="text-center" data-aos="fade-up" data-aos-delay="100">
-              <div className="text-3xl font-bold text-primary">{productsData.length}+</div>
-              <div className="text-sm text-gray-600 uppercase">Categorías</div>
+              <div className="text-3xl font-bold text-blue-500">{productsData.length}+</div>
+              <div className="text-sm text-primary uppercase">Categorías</div>
             </div>
             <div className="text-center" data-aos="fade-up" data-aos-delay="200">
-              <div className="text-3xl font-bold text-primary">500+</div>
-              <div className="text-sm text-gray-600 uppercase">Productos</div>
+              <div className="text-3xl font-bold text-blue-500">500+</div>
+              <div className="text-sm text-primary uppercase">Productos</div>
             </div>
             <div className="text-center" data-aos="fade-up" data-aos-delay="300">
-              <div className="text-3xl font-bold text-primary">100%</div>
-              <div className="text-sm text-gray-600 uppercase">Calidad</div>
+              <div className="text-3xl font-bold text-blue-500">100%</div>
+              <div className="text-sm text-primary uppercase">Calidad</div>
             </div>
           </div>
         </div>
@@ -143,9 +143,14 @@ export default function ProductsGrid() {
             </p>
             <Link
               to="/contacto"
-              className="inline-block bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-secondary hover:text-white transition-all duration-300 hover:scale-105 shadow-lg"
+              className="relative inline-block overflow-hidden bg-primary text-white px-8 py-4 uppercase cursor-pointer border border-white group transition-colors duration-500 hover:text-primary rounded-full"
             >
-              Contactar Ahora
+              <span
+                className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out pointer-events-none block"
+              />
+              <span className="relative z-10 transition-colors duration-500">
+                Contactanos
+              </span>
             </Link>
           </div>
         </div>

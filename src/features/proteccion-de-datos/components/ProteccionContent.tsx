@@ -1,12 +1,12 @@
 
 export default function ProteccionContent() {
   return (
-    <section className="max-w-7xl mx-auto py-20 px-4">
+    <section className="max-w-4xl mx-auto py-20 px-4">
       <div className="space-y-8 text-gray-700" data-aos="fade-up">
         <div>
           <h2 className="text-3xl font-bold text-primary mb-4">1. Información General</h2>
           <p className="text-lg leading-relaxed mb-4">
-            COFEMUN S.A.C., con RUC 20601234567, con domicilio en [Dirección], es responsable del tratamiento de sus datos personales. Nos comprometemos a proteger la privacidad y seguridad de la información personal que nos proporciona.
+            COMERCIAL FERRETERA MUNDIAL SOCIEDAD ANONIMA CERRADA - COFEMUN S.A.C., con RUC 20600962613, con domicilio en Av. San Juan Carlos Nro. 170 URB. Santa Lima - Lima - San Miguel, Perú, es responsable del tratamiento de sus datos personales. Nos comprometemos a proteger la privacidad y seguridad de la información personal que nos proporciona.
           </p>
         </div>
 
@@ -16,7 +16,7 @@ export default function ProteccionContent() {
             Recopilamos los siguientes tipos de datos personales:
           </p>
           <ul className="list-disc list-inside space-y-2 ml-4 text-lg">
-            <li>Datos de identificación: nombres, apellidos, DNI, RUC</li>
+            <li>Datos de identificación: nombres, apellidos, DNI</li>
             <li>Datos de contacto: dirección, teléfono, correo electrónico</li>
             <li>Datos comerciales: historial de compras, preferencias de productos</li>
             <li>Datos financieros: información de facturación y pagos</li>
@@ -108,9 +108,9 @@ export default function ProteccionContent() {
             Para ejercer cualquiera de sus derechos, puede contactarnos a través de:
           </p>
           <ul className="list-disc list-inside space-y-2 ml-4 text-lg">
-            <li>Correo electrónico: protecciondedatos@cofemun.com</li>
-            <li>Teléfono: +51 987 654 321</li>
-            <li>Dirección: [Dirección completa de la empresa]</li>
+            <li>Correo electrónico: info@cofemun.com</li>
+            <li>Teléfono: +51 981 067 345</li>
+            <li>Dirección: Av. San Juan Carlos Nro. 170 URB. Santa Lima - Lima - San Miguel, Perú</li>
           </ul>
           <p className="text-lg leading-relaxed mt-4">
             Responderemos a su solicitud en un plazo máximo de 20 días hábiles, de acuerdo con la normativa vigente.
@@ -118,35 +118,28 @@ export default function ProteccionContent() {
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold text-primary mb-4">10. Cookies y Tecnologías Similares</h2>
-          <p className="text-lg leading-relaxed mb-4">
-            Nuestro sitio web utiliza cookies para mejorar su experiencia de navegación. Puede configurar su navegador para rechazar cookies, aunque esto puede afectar algunas funcionalidades del sitio.
-          </p>
-        </div>
-
-        <div>
-          <h2 className="text-3xl font-bold text-primary mb-4">11. Cambios en esta Política</h2>
+          <h2 className="text-3xl font-bold text-primary mb-4">10. Cambios en esta Política</h2>
           <p className="text-lg leading-relaxed mb-4">
             Nos reservamos el derecho de modificar esta Política de Protección de Datos en cualquier momento. Le notificaremos cualquier cambio significativo mediante un aviso en nuestro sitio web o por correo electrónico.
           </p>
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold text-primary mb-4">12. Autoridad de Control</h2>
+          <h2 className="text-3xl font-bold text-primary mb-4">11. Autoridad de Control</h2>
           <p className="text-lg leading-relaxed mb-4">
             Si considera que sus derechos han sido vulnerados, puede presentar una reclamación ante la Autoridad Nacional de Protección de Datos Personales (ANPD) del Perú.
           </p>
           <p className="text-lg leading-relaxed">
             <strong>Autoridad Nacional de Protección de Datos Personales</strong><br />
-            Dirección: Jirón Carabaya N° 411, Lima<br />
-            Teléfono: (01) 625-0000<br />
-            Web: www.gob.pe/datospersonales
+            Dirección: Scipión Llona 305 - Miraflores - Lima - Perú<br />
+            Teléfono: (01) 204-8020<br />
+            Web: https://www.gob.pe/anpd
           </p>
         </div>
 
         <div className="bg-primary/10 p-6 rounded-lg mt-8">
           <p className="text-lg leading-relaxed text-primary font-semibold">
-            Última actualización: Enero 2025
+            Última actualización: Enero 10, 2026
           </p>
         </div>
       </div>

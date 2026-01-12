@@ -14,22 +14,22 @@ export default function ContactSection() {
           </div>
           <div className="flex items-center gap-3">
             <Mail className="w-6 h-6 text-primary" />
-            <p className="text-gray-600 text-lg">info@cofemun.com</p>
+            <p className="text-blue-500 text-lg">info@cofemun.com</p>
           </div>
           <div className="flex items-center gap-3">
             <Phone className="w-6 h-6 text-primary" />
-            <p className="text-gray-600 text-lg">+51 987 654 321</p>
+            <p className="text-blue-500 text-lg">+51 981 067 345</p>
           </div>
           <div className="flex items-center gap-3">
             <MapPin className="w-6 h-6 text-primary" />
-            <p className="text-gray-600 text-lg">Av. de la Providencia 123, Santiago, Chile</p>
+            <p className="text-blue-500 text-lg">Av. San Juan Carlos Nro. 170 URB. Santa Lima - Lima - San Miguel, Perú</p>
           </div>
           <div>
-            <h3 className="text-gray-600 text-lg mb-2">También puedes seguirnos en:</h3>
+            <h3 className="text-primary text-lg mb-2">También puedes seguirnos en:</h3>
             <div className="flex items-center gap-8 text-primary">
-              <Facebook className="w-6 h-6 cursor-pointer" />
-              <Instagram className="w-6 h-6 cursor-pointer" />
-              <Linkedin className="w-6 h-6 cursor-pointer" />
+              <Facebook className="w-6 h-6 cursor-pointer hover:text-blue-500 transition-all duration-500" />
+              <Instagram className="w-6 h-6 cursor-pointer hover:text-blue-500 transition-all duration-500" />
+              <Linkedin className="w-6 h-6 cursor-pointer hover:text-blue-500 transition-all duration-500" />
             </div>
           </div>
         </div>
@@ -37,7 +37,7 @@ export default function ContactSection() {
           <div data-aos="fade-up" data-aos-delay="100"> 
             <h2 className="text-2xl font-bold uppercase text-primary">Envíanos un mensaje</h2>
             <hr className="w-30 border-2 border-primary mb-4" />
-            <p className="text-gray-600 text-lg mb-4">
+            <p className="text-primary text-lg mb-4">
               Completa el formulario y nos pondremos en contacto contigo lo antes posible.
             </p>
           </div>

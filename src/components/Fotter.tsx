@@ -1,4 +1,4 @@
-import { Phone, Mail, Facebook, Instagram, Linkedin, ChevronRight } from "lucide-react"
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, ChevronRight } from "lucide-react"
 import { Link } from "react-router-dom"
 
 export default function Fotter() {
@@ -16,17 +16,21 @@ export default function Fotter() {
           <div className="space-y-4">
             <div className="flex items-center justify-center md:justify-start gap-2">
               <Phone className="w-6 h-6 text-primary" />
-              <p className="text-gray-600">+51 987 654 321</p>
+              <p className="text-blue-500">+51 981 067 345</p>
             </div>
             <div className="flex items-center justify-center md:justify-start gap-2">
               <Mail className="w-6 h-6 text-primary" />
-              <p className="text-gray-600">info@cofemun.com</p>
+              <p className="text-blue-500">info@cofemun.com</p>
+            </div>
+            <div className="flex items-center justify-center md:justify-start gap-2">
+              <MapPin className="w-10 h-10 text-primary" />
+              <p className="text-blue-500">Av. San Juan Carlos Nro. 170 URB. Santa Lima - Lima - San Miguel, Perú</p>
             </div>
           </div>
           <div className="flex items-center justify-center md:justify-start gap-5 text-primary">
-            <Facebook className="w-6 h-6 cursor-pointer" />
-            <Instagram className="w-6 h-6 cursor-pointer" />
-            <Linkedin className="w-6 h-6 cursor-pointer" />
+            <Facebook className="w-6 h-6 cursor-pointer hover:text-blue-500 transition-all duration-500" />
+            <Instagram className="w-6 h-6 cursor-pointer hover:text-blue-500 transition-all duration-500" />
+            <Linkedin className="w-6 h-6 cursor-pointer hover:text-blue-500 transition-all duration-500" />
           </div>
         </div>
         <div className="my-8 md:my-0 md:mx-8 border-t-2 md:border-t-0 md:border-l-2 border-primary h-0 md:h-auto"></div>

@@ -8,7 +8,7 @@ export default function AboutSection() {
         <div
           className="grid grid-cols-1 md:grid-cols-2 gap-15 items-center">
           <div data-aos="fade-up" className="mx-4 md:mx-0">
-            <h2 className="text-3xl md:text-5xl font-bold uppercase text-blue-500 mb-4 text-center md:text-left">
+            <h2 className="text-3xl md:text-4xl font-bold uppercase text-blue-500 mb-4 text-center md:text-left">
               ¿Qué <br /> <span className="font-bold text-primary">Hacemos?</span>
             </h2>
             <p className="text-base md:text-lg text-primary">

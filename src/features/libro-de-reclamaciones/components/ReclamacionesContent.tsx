@@ -82,21 +82,21 @@ export default function ReclamacionesContent() {
                 <MapPin className="w-6 h-6 text-primary mt-1 shrink-0" />
                 <div>
                   <p className="font-semibold text-gray-800">Dirección:</p>
-                  <p className="text-gray-600">[Dirección completa de la empresa]</p>
+                  <p className="text-gray-600">Av. San Juan Carlos Nro. 170 URB. Santa Lima - Lima - San Miguel, Perú</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Phone className="w-6 h-6 text-primary mt-1 shrink-0" />
                 <div>
                   <p className="font-semibold text-gray-800">Teléfono:</p>
-                  <p className="text-gray-600">+51 987 654 321</p>
+                  <p className="text-gray-600">+51 981 067 345</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Mail className="w-6 h-6 text-primary mt-1 shrink-0" />
                 <div>
                   <p className="font-semibold text-gray-800">Correo Electrónico:</p>
-                  <p className="text-gray-600">reclamaciones@cofemun.com</p>
+                  <p className="text-gray-600">info@cofemun.com</p>
                 </div>
               </div>
             </div>
@@ -116,9 +116,9 @@ export default function ReclamacionesContent() {
             </p>
             <p className="text-gray-700">
               <strong>Instituto Nacional de Defensa de la Competencia y de la Protección de la Propiedad Intelectual (INDECOPI)</strong><br />
-              Dirección: Calle de la Prosa N° 138, San Borja, Lima<br />
-              Teléfono: (01) 224-7800<br />
-              Web: www.indecopi.gob.pe
+              Dirección: Av. del Aire 384, San Borja - Lima - Perú - 15034<br />
+              Teléfono: (01) 224-7777<br />
+              Web: www.gob.pe/indecopi
             </p>
           </div>
         </div>

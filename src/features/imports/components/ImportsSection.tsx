@@ -21,7 +21,7 @@ export default function ImportsSection() {
               Garantizamos una facturación ordenada por centros de costos y trazabilidad total de tus pedidos. Con garantía de calidad y certificación de proveedores. Todo ello sin perder el foco en la eficiencia y seguridad de tu operación.
             </p>
             <a href="/contacto"
-              className="relative inline-block overflow-hidden bg-primary text-white px-5 py-2 uppercase cursor-pointer border border-primary group transition-colors duration-500 hover:text-gray-600 mt-10 rounded-full"
+              className="relative inline-block overflow-hidden bg-primary text-white px-5 py-2 uppercase cursor-pointer border border-primary group transition-colors duration-500 hover:text-primary mt-10 rounded-full"
             >
               <span
                 className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out pointer-events-none block"
@@ -42,7 +42,7 @@ export default function ImportsSection() {
               Nuestra flota cumple estrictos protocolos de seguridad para carga pesada y materiales industriales, minimizando mermas y asegurando que tu mercadería llegue intacta. Con cobertura nacional para la industria.
             </p>
             <a href="/contacto"
-              className="relative inline-block overflow-hidden bg-primary text-white px-5 py-2 uppercase cursor-pointer border border-primary group transition-colors duration-500 hover:text-gray-600 mt-10 rounded-full"
+              className="relative inline-block overflow-hidden bg-primary text-white px-5 py-2 uppercase cursor-pointer border border-primary group transition-colors duration-500 hover:text-primary mt-10 rounded-full"
             >
               <span
                 className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out pointer-events-none block"

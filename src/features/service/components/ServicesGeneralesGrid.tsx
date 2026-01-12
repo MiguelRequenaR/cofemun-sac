@@ -23,10 +23,10 @@ export default function ServicesGeneralesGrid() {
     <section className='bg-white py-20'>
       <div className="max-w-7xl mx-auto px-4">
         <h2 
-          className="text-3xl md:text-4xl uppercase mb-4 text-center text-blue-500" 
+          className="text-3xl md:text-4xl uppercase mb-4 text-center text-blue-500 font-bold" 
           data-aos="fade-up"
         >
-          Servicios <span className="font-bold text-primary">Industriales</span>
+          Servicios <span className=" text-primary">Industriales</span>
         </h2>
         <hr className="mb-4 w-30 mx-auto border-2 border-primary" data-aos="fade-up" />
         <p
@@ -77,7 +77,7 @@ export default function ServicesGeneralesGrid() {
         <div className="text-center mt-12" data-aos="fade-up" data-aos-delay="200">
           <Link 
             to="/contacto"
-            className="relative inline-block overflow-hidden bg-primary text-white px-8 py-3 text-lg uppercase cursor-pointer border border-primary group transition-colors duration-500 hover:text-gray-600 rounded-full"
+            className="relative inline-block overflow-hidden bg-primary text-white px-8 py-3 text-lg uppercase cursor-pointer border border-primary group transition-colors duration-500 hover:text-primary rounded-full"
           >
             <span
               className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out pointer-events-none block"

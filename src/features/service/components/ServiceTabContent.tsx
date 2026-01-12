@@ -71,20 +71,11 @@ export default function ServiceTabContent() {
                   Garantizamos la continuidad de tus operaciones. Mantenemos un inventario rotativo de los productos de mayor demanda para asegurar que tengas los insumos cuando los necesitas, evitando paradas.
                 </p>
               </div>
-
-              <div>
-                <h3 className="text-xl font-bold uppercase text-primary mb-2">
-                  Acuerdos Corporativos B2B
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Adaptamos nuestra propuesta comercial a tu empresa. Ofrecemos líneas de crédito, homologación de proveedores y atención preferencial para áreas de compras y logística.
-                </p>
-              </div>
             </div>
 
             <Link 
               to="/contacto"
-              className="relative inline-block overflow-hidden bg-primary text-white px-6 py-3 uppercase cursor-pointer border border-primary group transition-colors duration-500 hover:text-gray-600 mt-4 rounded-full"
+              className="relative inline-block overflow-hidden bg-primary text-white px-6 py-3 uppercase cursor-pointer border border-primary group transition-colors duration-500 hover:text-primary mt-4 rounded-full"
             >
               <span
                 className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out pointer-events-none block"
