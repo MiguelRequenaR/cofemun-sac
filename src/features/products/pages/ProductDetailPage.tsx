@@ -75,7 +75,7 @@ export default function ProductDetailPage() {
                 Solicitar Cotización
               </Link>
               <Link 
-                to="/contacto"
+                to="/productos"
                 className="inline-flex items-center gap-2 bg-secondary text-primary px-8 py-4 rounded-full font-bold hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 shadow-xl"
               >
                 <List className="w-5 h-5" />
@@ -122,13 +122,13 @@ export default function ProductDetailPage() {
               key={relatedProduct.id}
               className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3"
             >
-              <div className="relative h-64 overflow-hidden bg-gray-100">
+              <div className="relative aspect-video overflow-hidden bg-gray-100 flex items-center justify-center">
                 <img
                   src={relatedProduct.image}
                   alt={relatedProduct.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="max-h-52 w-auto max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 <div className="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center">
                   <span className="text-primary font-bold text-sm">{String(index + 1).padStart(2, '0')}</span>

@@ -12,19 +12,12 @@ const carouselImages = [
   {
     id: 2,
     image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "Abastecimiento Industrial\n y Metal Mecánico",
-    description: "Equipamiento especializado, abrasivos y herramientas de corte para minería, \nmetal mecánica e industria en general.",
+    title: "Abastecimiento Industrial\n y Metal Mecánica",
+    description: "Productos de calidad para la industria en general, y para metal mecánica.",
     buttonLink: "/servicios",
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1559297434-fae8a1916a79?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "Logística y Transporte \n de Materiales",
-    description: "Gestión de transporte eficiente adaptada a tu proyecto. Aseguramos que tus materiales \n lleguen seguros y a tiempo.",
-    buttonLink: "/servicios",
-  },
-  {
-    id: 4,
     image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Atención Corporativa y \nLicitaciones",
     description: "Atención especializada para grandes volúmenes industriales. Experiencia y solidez \n desde el 2016 atendiendo requerimientos de empresas mineras e industriales.",

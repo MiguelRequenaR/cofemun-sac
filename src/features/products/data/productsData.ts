@@ -30,10 +30,10 @@ export const productsData: Product[] = [
   },
   {
     id: 2,
-    title: "Herramientas Electricas y Manuales",
-    slug: "herramientas-electricas-manuales",
+    title: "Herramientas Electricas",
+    slug: "herramientas-electricas",
     image: "https://images.unsplash.com/photo-1518709414768-a88981a4515d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description: "Herramientas profesionales de las mejores marcas para trabajos industriales, mantenimiento y operaciones. Garantizamos durabilidad y precisión en cada herramienta.",
+    description: "Equipos de alto rendimiento para los trabajos más exigentes. Ofrecemos potencia, seguridad y eficiencia garantizada para maximizar la productividad en proyectos industriales.",
     relatedProducts: [
       {
         id: 1,
@@ -44,15 +44,43 @@ export const productsData: Product[] = [
   },
   {
     id: 3,
-    title: "Valvulas, Conexiones y Pernos",
+    title: "Herramientas Manuales",
+    slug: "herramientas-manuales",
+    image: "https://images.unsplash.com/photo-1567361808960-dec9cb578182?q=80&w=1495&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Precisión y resistencia en tus manos. Amplia gama de herramientas ergonómicas y duraderas, indispensables para cualquier labor de ajuste, reparación o montaje.",
+    relatedProducts: [
+      {
+        id: 1,
+        name: "Destornilladores",
+        image: "https://images.unsplash.com/photo-1645639554326-6d738cf1695b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+    ]
+  },
+  {
+    id: 4,
+    title: "Valvulas y Conexiones",
     slug: "valvulas-conexiones",
     image: "https://images.unsplash.com/photo-1642797735471-3e90055c5ff9?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description: "Todo lo necesario para instalaciones industriales. Productos de calidad para sistemas hidráulicos, neumáticos y de alta presión.",
+    description: "Componentes esenciales para el control eficiente de fluidos. Garantizamos estanqueidad y resistencia en sistemas hidráulicos, con un amplia gama de materiales y medidas.",
     relatedProducts: [
       {
         id: 1,
         name: "Válvulas",
         image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpromart.vteximg.com.br%2Farquivos%2Fids%2F7281754-275-275%2F152132.jpg%3Fv%3D638248676109800000&f=1&nofb=1&ipt=4e1d8b932c4fa770596e5ce3b5c0f85932141f5590d708102b803752524f105a"
+      },
+    ]
+  },
+  {
+    id: 5,
+    title: "Pernos y Productos de Fijación",
+    slug: "pernos-productos-fijacion",
+    image: "https://www.pernosyabrazaderasperu.com/images/servicios/1025.jpg",
+    description: "Fijación segura resistente para cualquier estructura. Amplio stock de pernos, anclajes y sujeciones de alta resistencia, ideales para aplicaciones industriales.",
+    relatedProducts: [
+      {
+        id: 1,
+        name: "Pernos Hexagonales",
+        image: "https://images.unsplash.com/photo-1759159092038-d414f661dbf0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       },
     ]
   },
