@@ -8,7 +8,7 @@ export default function HeroAbout() {
       <div className="absolute inset-0 bg-black/60"></div>
       <div className="relative z-10 flex flex-col items-center justify-end w-full h-full">
         <h1 className="text-white text-3xl md:text-[60px] font-bold mb-4 drop-shadow-lg uppercase text-center" data-aos="fade-up">
-          Soluciones y Servicios <br /> Generales
+          Conoce nuestros <br /> Servicios
         </h1>
       </div>
     </section>

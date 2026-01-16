@@ -1,10 +1,12 @@
-import { ArrowRight, ShoppingBag } from "lucide-react"
+import { ArrowRight, ShoppingBag, X, Tag } from "lucide-react"
 import { Link } from "react-router-dom"
 import { productsData } from "../data/productsData"
+import type { RelatedBrand } from "../data/productsData"
 import { useState } from "react"
 
 export default function ProductsGrid() {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
+  const [selectedBrand, setSelectedBrand] = useState<RelatedBrand | null>(null);
 
   return (
     <section id="catalogo" className="py-20 bg-linear-to-b from-white via-gray-50 to-white">
@@ -65,9 +67,9 @@ export default function ProductsGrid() {
                   {/* Badge de categoría */}
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
                     <div className="flex items-center gap-2">
-                      <ShoppingBag className="w-4 h-4 text-primary" />
+                      <Tag className="w-4 h-4 text-primary" />
                       <span className="text-sm font-semibold text-gray-800">
-                        {product.relatedProducts.length} Items
+                        {product.relatedBrands.length} Marcas
                       </span>
                     </div>
                   </div>
@@ -85,28 +87,33 @@ export default function ProductsGrid() {
                   </div>
                 </div>
 
-                {/* Sección inferior con productos relacionados */}
+                {/* Sección inferior con marcas relacionadas */}
                 <div className="p-6 bg-white">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-sm font-semibold text-gray-600 uppercase tracking-wide">
-                      Productos Destacados
+                      Marcas Relacionadas
                     </span>
                     <ArrowRight className={`w-5 h-5 text-primary transition-transform duration-500 ${
                       hoveredId === product.id ? 'translate-x-2' : ''
                     }`} />
                   </div>
 
-                  {/* Mini galería de productos relacionados */}
+                  {/* Mini galería de marcas relacionadas */}
                   <div className="grid grid-cols-4 gap-2">
-                    {product.relatedProducts.slice(0, 4).map((related) => (
+                    {product.relatedBrands.slice(0, 4).map((brand) => (
                       <div
-                        key={related.id}
-                        className="aspect-square rounded-lg overflow-hidden border-2 border-gray-100 hover:border-primary transition-all duration-300"
+                        key={brand.id}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setSelectedBrand(brand);
+                        }}
+                        className="aspect-square rounded-lg overflow-hidden border-2 border-gray-100 hover:border-primary transition-all duration-300 cursor-pointer bg-white flex items-center justify-center p-2"
                       >
                         <img
-                          src={related.image}
-                          alt={related.name}
-                          className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                          src={brand.logo}
+                          alt={brand.name}
+                          className="w-full h-full object-contain hover:scale-110 transition-transform duration-300"
                         />
                       </div>
                     ))}
@@ -155,6 +162,125 @@ export default function ProductsGrid() {
           </div>
         </div>
       </div>
+
+      {/* Modal de productos de la marca */}
+      {selectedBrand && (
+        <div 
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedBrand(null)}
+        >
+          <div 
+            className="bg-white rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Encabezado del modal */}
+            <div className="sticky top-0 bg-linear-to-r from-primary to-blue-500 text-white p-6 md:p-8 z-10">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <div className="bg-white p-3 rounded-lg">
+                    <img 
+                      src={selectedBrand.logo} 
+                      alt={selectedBrand.name}
+                      className="h-12 w-auto object-contain"
+                    />
+                  </div>
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold uppercase">
+                      Productos {selectedBrand.name}
+                    </h2>
+                    <p className="text-white/90 text-sm mt-1">
+                      {selectedBrand.products.length} productos disponibles
+                    </p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setSelectedBrand(null)}
+                  className="bg-white/20 hover:bg-white/30 p-2 rounded-full transition-all duration-300 hover:scale-110"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+            </div>
+
+            {/* Grid de productos */}
+            <div className="p-6 md:p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {selectedBrand.products.map((product) => (
+                  <div 
+                    key={product.id}
+                    className="group bg-white rounded-xl border-2 border-gray-100 hover:border-primary overflow-hidden transition-all duration-300 hover:shadow-xl"
+                  >
+                    {/* Imagen del producto */}
+                    <div className="relative h-48 overflow-hidden bg-gray-50">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
+
+                    {/* Información del producto */}
+                    <div className="p-5">
+                      <h3 className="text-lg font-bold text-primary mb-2 uppercase line-clamp-2 group-hover:text-blue-500 transition-colors duration-300">
+                        {product.name}
+                      </h3>
+                      <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
+                        {product.description}
+                      </p>
+
+                      {/* Características */}
+                      <div className="space-y-2">
+                        <h4 className="text-xs font-semibold text-gray-700 uppercase tracking-wide">
+                          Características:
+                        </h4>
+                        <ul className="space-y-1">
+                          {product.features.slice(0, 3).map((feature, idx) => (
+                            <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
+                              <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 shrink-0" />
+                              <span className="line-clamp-1">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Badge de disponibilidad */}
+                      <div className="mt-4 pt-4 border-t border-gray-100">
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs text-green-600 font-semibold flex items-center gap-1">
+                            <ShoppingBag className="w-3 h-3" />
+                            Disponible
+                          </span>
+                          <button className="text-xs text-primary hover:text-blue-500 font-semibold uppercase tracking-wide transition-colors duration-300 flex items-center gap-1 group/btn">
+                            Ver más
+                            <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Botón de contacto */}
+              <div className="mt-8 text-center">
+                <Link
+                  to="/contacto"
+                  onClick={() => setSelectedBrand(null)}
+                  className="relative inline-block overflow-hidden bg-primary text-white px-8 py-3 uppercase cursor-pointer border border-primary group transition-colors duration-500 hover:text-primary rounded-full"
+                >
+                  <span
+                    className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out pointer-events-none block"
+                  />
+                  <span className="relative z-10 transition-colors duration-500 font-semibold">
+                    Solicitar Cotización
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
