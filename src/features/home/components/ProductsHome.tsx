@@ -10,40 +10,52 @@ const products = [
   },
   {
     id: 2,
-    title: "Herramientas Electricas y Manuales",
+    title: "Herramientas Electricas",
     image: "https://images.unsplash.com/photo-1518709414768-a88981a4515d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    link: "/productos/herramientas-electricas-manuales",
+    link: "/productos/herramientas-electricas",
   },
   {
     id: 3,
-    title: "Valvulas, Conexiones y Pernos",
+    title: "Herramientas Manuales",
+    image: "https://images.unsplash.com/photo-1567361808960-dec9cb578182?q=80&w=1495&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    link: "/productos/herramientas-manuales",
+  },
+  {
+    id: 4,
+    title: "Valvulas y Conexiones",
     image: "https://images.unsplash.com/photo-1642797735471-3e90055c5ff9?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "/productos/valvulas-conexiones",
   },
   {
-    id: 4,
+    id: 5,
+    title: "Pernos y Productos de Fijación",
+    image: "https://www.pernosyabrazaderasperu.com/images/servicios/1025.jpg",
+    link: "/productos/pernos-productos-fijacion",
+  },
+  {
+    id: 6,
     title: "EPP y Seguridad Industrial",
     image: "https://images.unsplash.com/photo-1755925193287-275aa7fe64f0?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "/productos/epp-seguridad-industrial",
   },
   {
-    id: 5,
+    id: 7,
     title: "Electricidad e Iluminación",
     image: "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "/productos/electricidad-iluminacion",
   },
   {
-    id: 6,
+    id: 8,
     title: "Pinturas y Acabados",
     image: "https://images.unsplash.com/photo-1652829069968-4ded3e30f411?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "/productos/pinturas-acabados",
   },
   {
-    id: 7,
+    id: 9,
     title: "Insumos de Limpieza",
     image: "https://images.unsplash.com/photo-1761641428582-b85a085340d1?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    link: "/productos/insumos-limpieza",
-  },
+    link: "/productos/insumos-limpieza"
+  }
 ]
 
 export default function ProductsHome() {
