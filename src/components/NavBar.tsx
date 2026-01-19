@@ -34,8 +34,8 @@ export default function NavBar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center py-5 px-4 md:px-0">
         <Link to="/">
           <div className="flex items-center gap-2">
-            <img src="/logoCofemun.png" alt="logo" className="w-16 h-16" />
-            <h1 className="text-2xl font-bold text-white uppercase">COFEMUN S.A.C.</h1>
+            <img src="/logoCofemun.png" alt="Logo de la empresa de suministros industriales COFEMUN S.A.C." className="w-10 md:w-16 h-10 md:h-16" />
+            <h1 className="text-lg md:text-2xl font-bold text-white uppercase">COFEMUN S.A.C.</h1>
           </div>
         </Link>
 

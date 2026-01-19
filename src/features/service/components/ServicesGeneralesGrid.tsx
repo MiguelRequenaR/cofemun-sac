@@ -44,7 +44,7 @@ const services: Service[] = [
     id: 6,
     title: "Mantenimiento de Maquinaria",
     description: "Programa integral de mantenimiento preventivo y correctivo para equipos de planta. Diagnóstico especializado, reparación de sistemas mecánicos e hidráulicos y gestión de repuestos para minimizar los tiempos de parada y maximizar la productividad.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1170&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1653491887161-aaf72d4514f3?q=80&w=1520&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   }
 ];
 

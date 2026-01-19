@@ -38,7 +38,6 @@ export default function FormContact() {
 
     setIsSubmitted(true);
 
-    // Limpiar el formulario después de 2 segundos
     setTimeout(() => {
       setFormData({
         name: '',
@@ -131,19 +130,16 @@ export default function FormContact() {
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white"
           >
             <option value="">Seleccione un servicio</option>
-            <option value="Gasfitería">Gasfitería</option>
-            <option value="Electricidad">Electricidad</option>
-            <option value="Pintado">Pintado</option>
-            <option value="Albañilería">Albañilería</option>
-            <option value="Mantenimiento General">Mantenimiento General</option>
-            <option value="Materiales de Ferretería">Materiales de Ferretería</option>
-            <option value="Herramientas Eléctricas y Manuales">Herramientas Eléctricas y Manuales</option>
+            <option value="Suministro de Materiales Industriales">Suministro de Materiales Industriales</option>
+            <option value="Instalaciones Eléctricas Industriales">Instalaciones Eléctricas Industriales</option>
+            <option value="Pintado y Tarrajeo Industrial">Pintado y Tarrajeo Industrial</option>
+            <option value="Abastecimiento industrial Metal Mecánica">Abastecimiento industrial Metal Mecánica</option>
+            <option value="Mantenimiento de Maquinaria">Mantenimiento de Maquinaria</option>
+            <option value="Atención Corporativa y Licitaciones">Atención Corporativa y Licitaciones</option>
             <option value="Válvulas y Conexiones">Válvulas y Conexiones</option>
             <option value="EPP y Seguridad Industrial">EPP y Seguridad Industrial</option>
             <option value="Electricidad e Iluminación">Electricidad e Iluminación</option>
-            <option value="Pinturas y Acabados">Pinturas y Acabados</option>
             <option value="Insumos de Limpieza">Insumos de Limpieza</option>
-            <option value="Importaciones">Importaciones</option>
             <option value="Otros">Otros</option>
           </select>
         </div>
