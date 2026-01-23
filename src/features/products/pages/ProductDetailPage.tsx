@@ -2,12 +2,42 @@ import { useParams, Link } from "react-router-dom"
 import { getProductBySlug } from "../data/productsData"
 import type { RelatedBrand } from "../data/productsData"
 import { ArrowLeft, Check, Package, Star, ShoppingBag, List, X, Tag } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function ProductDetailPage() {
   const { slug } = useParams();
   const product = getProductBySlug(slug);
   const [selectedBrand, setSelectedBrand] = useState<RelatedBrand | null>(null);
+  useEffect(() => {
+    if (selectedBrand) {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      
+      // Detener Lenis smooth scroll
+      if (window.__lenis) {
+        window.__lenis.stop();
+      }
+      
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    } else {
+      // Reactivar Lenis smooth scroll
+      if (window.__lenis) {
+        window.__lenis.start();
+      }
+      
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+    }
+
+    return () => {
+      // Asegurar que Lenis esté activo al desmontar
+      if (window.__lenis) {
+        window.__lenis.start();
+      }
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+    };
+  }, [selectedBrand]);
 
   if (!product) {
     return (
@@ -71,7 +101,7 @@ export default function ProductDetailPage() {
               data-aos-delay="300"
             >
               <Link 
-                to="/contacto"
+                to={`/cotizacion?producto=${encodeURIComponent(product.title)}`}
                 className="inline-flex items-center gap-2 bg-secondary text-primary px-8 py-4 rounded-full font-bold hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 shadow-xl"
               >
                 <ShoppingBag className="w-5 h-5" />
@@ -120,8 +150,28 @@ export default function ProductDetailPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up">
-          {product.relatedBrands.map((brand, index) => (
+        {product.relatedBrands.length === 0 ? (
+          <div className="flex flex-col items-center justify-center py-16" data-aos="fade-up">
+            <div className="w-32 h-32 bg-gray-100 rounded-full flex items-center justify-center mb-6">
+              <Package className="w-16 h-16 text-gray-400" />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-800 mb-3">
+              No hay marcas disponibles
+            </h3>
+            <p className="text-gray-600 text-center max-w-md mb-8">
+              Actualmente no tenemos marcas relacionadas para este producto. Contáctanos para más información.
+            </p>
+            <Link
+              to={`/cotizacion?producto=${encodeURIComponent(product.title)}`}
+              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-transparent hover:text-primary border-transparent border-2 hover:border-primary text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+            >
+              <ShoppingBag className="w-5 h-5" />
+              Solicitar Información
+            </Link>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up">
+            {product.relatedBrands.map((brand, index) => (
             <div
               key={brand.id}
               onClick={() => setSelectedBrand(brand)}
@@ -175,6 +225,7 @@ export default function ProductDetailPage() {
             </div>
           ))}
         </div>
+        )}
       </section>
 
       {/* CTA Final */}
@@ -195,7 +246,7 @@ export default function ProductDetailPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                to="/contacto"
+                to={`/cotizacion?producto=${encodeURIComponent(product.title)}`}
                 className="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-full font-bold border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white transition-all duration-500 ease-in-out uppercase"
               >
                 Cotizar Ahora
@@ -216,14 +267,15 @@ export default function ProductDetailPage() {
       {selectedBrand && (
         <div 
           className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          style={{ overscrollBehavior: 'contain' }}
           onClick={() => setSelectedBrand(null)}
         >
           <div 
-            className="bg-white rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+            className="bg-white rounded-2xl max-w-6xl w-full my-auto shadow-2xl flex flex-col max-h-[90vh] min-h-0"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Encabezado del modal */}
-            <div className="sticky top-0 bg-linear-to-r from-primary to-blue-500 text-white p-6 md:p-8 z-10">
+            <div className="bg-linear-to-r from-primary to-blue-500 text-white p-6 md:p-8 rounded-t-2xl shrink-0">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
                   <div className="bg-white p-3 rounded-lg">
@@ -244,7 +296,7 @@ export default function ProductDetailPage() {
                 </div>
                 <button
                   onClick={() => setSelectedBrand(null)}
-                  className="bg-white/20 hover:bg-white/30 p-2 rounded-full transition-all duration-300 hover:scale-110"
+                  className="bg-white/20 hover:bg-white/30 p-2 rounded-full transition-all duration-300 hover:scale-110 cursor-pointer"
                 >
                   <X className="w-6 h-6" />
                 </button>
@@ -252,7 +304,10 @@ export default function ProductDetailPage() {
             </div>
 
             {/* Grid de productos */}
-            <div className="p-6 md:p-8">
+            <div 
+              className="p-6 md:p-8 overflow-y-auto flex-1 min-h-0"
+              style={{ overscrollBehavior: 'contain' }}
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {selectedBrand.products.map((brandProduct) => (
                   <div 
@@ -260,11 +315,11 @@ export default function ProductDetailPage() {
                     className="group bg-white rounded-xl border-2 border-gray-100 hover:border-primary overflow-hidden transition-all duration-300 hover:shadow-xl cursor-pointer"
                   >
                     {/* Imagen del producto */}
-                    <div className="relative h-48 overflow-hidden bg-gray-50">
+                    <div className="relative h-48 flex items-center justify-center overflow-hidden bg-gray-50">
                       <img
                         src={brandProduct.image}
                         alt={brandProduct.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
@@ -310,7 +365,7 @@ export default function ProductDetailPage() {
               {/* Botón de contacto */}
               <div className="mt-8 text-center">
                 <Link
-                  to="/contacto"
+                  to={`/cotizacion?producto=${encodeURIComponent(product.title)}&marca=${encodeURIComponent(selectedBrand.name)}`}
                   onClick={() => setSelectedBrand(null)}
                   className="relative inline-block overflow-hidden bg-primary text-white px-8 py-3 uppercase cursor-pointer border border-primary group transition-colors duration-500 hover:text-primary rounded-full"
                 >
@@ -318,7 +373,7 @@ export default function ProductDetailPage() {
                     className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out pointer-events-none block"
                   />
                   <span className="relative z-10 transition-colors duration-500 font-semibold">
-                    Solicitar Cotización
+                    Cotizar Productos
                   </span>
                 </Link>
               </div>

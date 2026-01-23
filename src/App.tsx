@@ -8,6 +8,7 @@ import Imports from "@/features/imports"
 import Products from "@/features/products"
 import ProductDetailPage from "@/features/products/pages/ProductDetailPage"
 import Contact from "@/features/contact"
+import Cotizacion from "@/features/cotizacion"
 import ProteccionDatos from "@/features/proteccion-de-datos"
 import LibroReclamaciones from "@/features/libro-de-reclamaciones"
 import Marcas from "@/features/marcas"
@@ -39,6 +40,7 @@ function App() {
           <Route path="/productos/:slug" element={<ProductDetailPage />} />
           <Route path="/marcas" element={<Marcas />} />
           <Route path="/contacto" element={<Contact />} />
+          <Route path="/cotizacion" element={<Cotizacion />} />
           <Route path="/proteccion-de-datos" element={<ProteccionDatos />} />
           <Route path="/libro-de-reclamaciones" element={<LibroReclamaciones />} />
         </Route>

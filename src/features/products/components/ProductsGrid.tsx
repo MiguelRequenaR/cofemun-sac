@@ -69,7 +69,9 @@ export default function ProductsGrid() {
                     <div className="flex items-center gap-2">
                       <Tag className="w-4 h-4 text-primary" />
                       <span className="text-sm font-semibold text-gray-800">
-                        {product.relatedBrands.length} Marcas
+                        {product.relatedBrands.length > 0 
+                          ? `${product.relatedBrands.length} Marcas` 
+                          : 'Sin marcas'}
                       </span>
                     </div>
                   </div>
@@ -98,26 +100,38 @@ export default function ProductsGrid() {
                     }`} />
                   </div>
 
-                  {/* Mini galería de marcas relacionadas */}
-                  <div className="grid grid-cols-4 gap-2">
-                    {product.relatedBrands.slice(0, 4).map((brand) => (
-                      <div
-                        key={brand.id}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          setSelectedBrand(brand);
-                        }}
-                        className="aspect-square rounded-lg overflow-hidden border-2 border-gray-100 hover:border-primary transition-all duration-300 cursor-pointer bg-white flex items-center justify-center p-2"
-                      >
-                        <img
-                          src={brand.logo}
-                          alt={brand.name}
-                          className="w-full h-full object-contain hover:scale-110 transition-transform duration-300"
-                        />
-                      </div>
-                    ))}
-                  </div>
+                  {product.relatedBrands.length > 0 ? (
+                    /* Mini galería de marcas relacionadas */
+                    <div className="grid grid-cols-4 gap-2">
+                      {product.relatedBrands.slice(0, 4).map((brand) => (
+                        <div
+                          key={brand.id}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            setSelectedBrand(brand);
+                          }}
+                          className="aspect-square rounded-lg overflow-hidden border-2 border-gray-100 hover:border-primary transition-all duration-300 cursor-pointer bg-white flex items-center justify-center p-2"
+                        >
+                          <img
+                            src={brand.logo}
+                            alt={brand.name}
+                            className="w-full h-full object-contain hover:scale-110 transition-transform duration-300"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    /* Mensaje cuando no hay marcas */
+                    <div className="text-center py-4 px-4 bg-gray-50 rounded-lg border-2 border-dashed border-gray-200">
+                      <p className="text-sm text-gray-600 font-medium">
+                        Sin marcas disponibles
+                      </p>
+                      <p className="text-xs text-gray-500 mt-1">
+                        Contáctanos para más información
+                      </p>
+                    </div>
+                  )}
                 </div>
 
                 {/* Botón de acción flotante */}
@@ -265,7 +279,7 @@ export default function ProductsGrid() {
               {/* Botón de contacto */}
               <div className="mt-8 text-center">
                 <Link
-                  to="/contacto"
+                  to={`/cotizacion?marca=${encodeURIComponent(selectedBrand.name)}`}
                   onClick={() => setSelectedBrand(null)}
                   className="relative inline-block overflow-hidden bg-primary text-white px-8 py-3 uppercase cursor-pointer border border-primary group transition-colors duration-500 hover:text-primary rounded-full"
                 >
