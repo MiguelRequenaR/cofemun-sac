@@ -2,42 +2,24 @@ import { useParams, Link } from "react-router-dom"
 import { getProductBySlug } from "../data/productsData"
 import type { RelatedBrand } from "../data/productsData"
 import { ArrowLeft, Check, Package, Star, ShoppingBag, List, X, Tag } from "lucide-react"
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
 
 export default function ProductDetailPage() {
   const { slug } = useParams();
   const product = getProductBySlug(slug);
   const [selectedBrand, setSelectedBrand] = useState<RelatedBrand | null>(null);
+  
   useEffect(() => {
-    if (selectedBrand) {
-      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-      
-      // Detener Lenis smooth scroll
-      if (window.__lenis) {
-        window.__lenis.stop();
-      }
-      
-      document.body.style.overflow = "hidden";
-      document.body.style.paddingRight = `${scrollbarWidth}px`;
-    } else {
-      // Reactivar Lenis smooth scroll
-      if (window.__lenis) {
-        window.__lenis.start();
-      }
-      
-      document.body.style.overflow = "";
-      document.body.style.paddingRight = "";
-    }
+    if (!selectedBrand) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
 
     return () => {
-      // Asegurar que Lenis esté activo al desmontar
-      if (window.__lenis) {
-        window.__lenis.start();
-      }
-      document.body.style.overflow = "";
-      document.body.style.paddingRight = "";
+      document.body.style.overflow = previousOverflow;
     };
   }, [selectedBrand]);
+
 
   if (!product) {
     return (
@@ -266,12 +248,11 @@ export default function ProductDetailPage() {
       {/* Modal de productos de la marca */}
       {selectedBrand && (
         <div 
-          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-          style={{ overscrollBehavior: 'contain' }}
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-start justify-center p-4 overflow-y-auto"
           onClick={() => setSelectedBrand(null)}
         >
           <div 
-            className="bg-white rounded-2xl max-w-6xl w-full my-auto shadow-2xl flex flex-col max-h-[90vh] min-h-0"
+            className="bg-white rounded-2xl max-w-6xl w-full my-8 shadow-2xl flex flex-col max-h-[calc(100vh-4rem)]"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Encabezado del modal */}
@@ -305,8 +286,7 @@ export default function ProductDetailPage() {
 
             {/* Grid de productos */}
             <div 
-              className="p-6 md:p-8 overflow-y-auto flex-1 min-h-0"
-              style={{ overscrollBehavior: 'contain' }}
+              className="flex-1 p-6 md:p-8 overflow-y-auto overscroll-contain"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {selectedBrand.products.map((brandProduct) => (
