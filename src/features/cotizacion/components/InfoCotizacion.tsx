@@ -3,7 +3,7 @@ import { Headphones } from "lucide-react"
 export default function InfoCotizacion() {
   return (
   <section className="max-w-7xl mx-auto">
-    <div>
+    <div className="mx-4 md:mx-0">
       {/* CTA adicional */}
       <div className="mt-16 bg-linear-to-r from-primary to-blue-500 rounded-3xl p-12 text-center text-white relative overflow-hidden" data-aos="fade-up">
         <div className="absolute inset-0 opacity-10">

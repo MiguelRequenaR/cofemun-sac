@@ -2,7 +2,7 @@ import { ShoppingBag, Clock, CheckCircle, TrendingUp } from "lucide-react"
 
 export default function HeroCotizacion() {
   return (
-    <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+    <section className="relative md:h-[60vh] py-10 min-h-[500px] flex items-center justify-center overflow-hidden">
       {/* Fondo con gradiente */}
       <div className="absolute inset-0 bg-primary"></div>
       

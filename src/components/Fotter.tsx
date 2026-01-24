@@ -13,7 +13,7 @@ export default function Fotter() {
             </h1>
           </Link>
           <p className="text-primary font-bold text-center md:text-left">Contáctanos:</p>
-          <div className="space-y-4">
+          <div className="space-y-4 mx-4 md:mx-0">
             <div className="flex items-center justify-center md:justify-start gap-2">
               <Phone className="w-6 h-6 text-primary" />
               <p className="text-blue-500">+51 981 067 345</p>
